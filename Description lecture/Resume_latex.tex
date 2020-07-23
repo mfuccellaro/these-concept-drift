@@ -1,0 +1,237 @@
+\documentclass[11pt,a4paper]{report}
+ \usepackage[francais]{babel}
+ \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{scrextend}
+\usepackage{xcolor}
+\usepackage[toc,page]{appendix}
+\usepackage[margin=2 cm]{geometry}
+%\usepackage[symbols]{circuitikz}
+%\usepackage{tikz}
+\lstset{language=R,
+basicstyle=\fontfamily{pcr}\selectfont\footnotesize\color{black},
+frame = single}
+\title{Regression Quantile}
+
+\date{2018}
+
+\begin{document}
+
+\tableofcontents
+
+\chapter{On peut répartir les différentes méthodologies en plusieurs catégories.}
+\section{Méthodes utilisant un test statistique}
+
+
+
+\subsection{Concept drift detection based on Fisher’s Exact test}
+\subsubsection{Danilo Rafael de Lima Cabral, Roberto Souto Maior de Barros, 2018}
+
+\paragraph{Mots clefs :} Tests Statistiques, Détection sur score de modèle.
+
+\paragraph{Résumé :}
+L'article propose trois méthodes de détection de dérive à partir du test de Fischer fait sur les prédictions du modèle, les variantes sont en partie faites pour réduire le coût calculatoire. Les différences entres les méthodes sont les tests statistiques et la manière dont ils sont utilisés. Dans les trois cas, on suppose que l'on dispose des prédictions du modèle et de la vérité. On sépare les prédictions en 2 ensembles, les plus récentes et les anciennes, on va ensuite, à l'aide de tests statistiques regarder si une différence de distribution apparait conséquence d'une dérive. 
+
+FPDD utilise le test de Fischer quand le nombre d'erreurs où de prédicitions justes est faible (inférieur à 5) et utilise le test de l'hypothèse des proportion égale utilisé par la méthode STEPD le cas échéant. $T\left(r_{0}, r_{r}, n_{o}, n_{r}\right)=\frac{\left|r_{0} / n_{o}-r_{r} / n_{r}\right|-0.5 \times\left(1 / n_{o}+1 / n_{r}\right)}{\sqrt{\hat{p} \times(1-\hat{p}) \times\left(1 / n_{o}+1 / n_{r}\right)}}$.
+
+FSDD utilise le test de Fischer quand le nombre d'erreurs où de prédicitions justes est inférieure à 5 et utilise le test du chi deux le cas échéant.
+
+FTDD utilise le test de Fischer exclusivement.
+
+Les trois méthodes sont testées avec plusieurs jeux de données contre DDM, ECDD, SEED, FHDDM, STEPD et sortent avec en moyenne de meilleur résultats.
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Amélioration du temps de calcul et des performances de plusieurs méthodes
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles été explorées par d'autres articles ?} Il reste à explorer plus de test statistiques et étudier une possible combinaison, càd l'utilisation de plusieurs test en simultané et un méta modèle. Experimenter l'impact de la taille des fenêtres d'observations priss en compte (elles sont brièvement étudiées).
+
+
+
+\subsection{Detecting Concept Drift Using Statistical Testing}
+\subsubsection{Kyosuke Nishida and Koichiro Yamauch, 2007}
+
+\paragraph{Mots clefs} Tests Statistiques, Détection sur score de modèle.
+
+\paragraph{Résumé :} L'article propose une méthode de détection de dérive à partir d'un test. On suppose que l'on dispose des prédictions du modèle et de la vérité. On sépare les prédictions en 2 ensembles, les plus récentes et les anciennes, on va ensuite, à l'aide de la statistique $$T\left(r_{0}, r_{r}, n_{o}, n_{r}\right)=\frac{\left|r_{0} / n_{o}-r_{r} / n_{r}\right|-0.5 \times\left(1 / n_{o}+1 / n_{r}\right)}{\sqrt{\hat{p} \times(1-\hat{p}) \times\left(1 / n_{o}+1 / n_{r}\right)}}$$ rejeter où accepter l'hypothèse de même distribution. 
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} L'article propose une méthodologie de détection de dérive sur les scores des modèles.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles été explorées par d'autres articles ?} La technique laisse à désirer en présence de dérive graduelle. Taille de la fenêtre.
+
+
+
+
+
+\subsection{Learning with Drift Detection}
+\subsubsection{João Gama, Pedro Medas, Gladys Castillo, Pedro Rodrigues, 2004}
+
+\paragraph{Mots clefs}
+
+\paragraph{Résumé :} Le but de la méthode développée ici est d'utiliser des intervalles de confiances de la loi normale appliquées aux erreures faite par le modèle pour détecter une dérive. L'erreur devant logiquement diminuer au fur et à mesure que le modèle dispose de donnée d'entraînement faisant l'hypothèse que la distribution sous-jacente est la même, quand celle-ci augmente au delà d'un certain seuil, on est en présence d'une dérive.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} L'article propose une méthodologie de détection de dérive sur les scores des modèles.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} L'article ne compare pas les autres travaux, mais compare les différences de performances avec et sans la méthodologie.
+
+
+\subsection{Handling adversarial concept drift in streaming data}
+\subsubsection{Tegjyot Singh Sethi , Mehmed Kantardzic, 2017}
+
+\paragraph{Mots clefs}  adversarial concept drift 
+
+\paragraph{Résumé :} A lire.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?}
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+\section{Méthodes à base de modèles}
+\subsection{Tracking recurring contexts using ensemble classifiers: an application to email filtering}
+\subsubsection{Ioannis Katakis, Grigorios Tsoumakas, Ioannis Vlahavas, 2009}
+
+\paragraph{Mots clefs}
+
+\paragraph{Résumé :} On suppose que les données arrivent par batch où packets, on va les projetter les données dans un espace puis, un algorithme non supervisé va les grouper par concepts, l'espace de projection permettant de comparer les instances avec la distance euclidienne. Chaque concept différents dispose de son modèle prédictif. Quand une nouvelle série d'observations arrive, elle est projeté dans l'espace, si elle ne correspond à aucun concept, on en créer un nouveau, sinon, on score.
+
+La projection des variables ce fait comme: $z_{i}=\left\{\begin{array}{l}
+\left\{P_{i, j}^{v}: j=1, \ldots, m, v \in V_{i}\right\}, \quad \text { si } f_{i} \text { est nominale } \\
+\left\{\mu_{i, j}, \sigma_{i, j}: j=1, \ldots, m\right\}, \quad \text { si } f_{i} \text { est numérique }
+\end{array}\right.$
+Et où:
+$P_{i, j}^{v}=P\left(f_{i}=v \mid c_{j}\right), i \in[1, n], j \in[1, m], v \in V_{i}$. Où $V_{i}$ est l'ensemble des valeurs possible que peut prendre la variable $f_{i}$.
+\paragraph{À quelle(s) problématique(s) l'article répond ?} À la projection des espaces des données dans un espace euclidien.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} L'article fait l'hypothèse que des données d'un même batch appartienne aux mêmes concepts.
+
+
+\subsection{Learning classification rules for telecom  customer call data under concept drift}
+\subsubsection{Black, M., Hickey, R, 2003}
+
+\paragraph{Mots clefs :}
+
+\paragraph{Résumé :} L'article développe plusieurs versions d'une méthodologie basée sur les arbres de décisions.  On suppose les données arrivant par batchs. Un attribut de temporalité est introduit dans le jeu de donnée. Un arbre de décision est fait sur le dataset. Si l’attribut de temps est présent dans les décisions, alors on a un drift. Cela permets également de voir quelles variables ont été impactées par le drift. Seul les règle émanant des branches qui se trouve dans la branche de l’arbre de décision où un attribut temporel est présent sont supprimés. Les règles qui n’ont pas été impactées restent.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Utiliser la temporalité afin de trouver les attributs en dépendant.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Utiliser cette méthode afin de vérifier si 
+
+
+
+\subsection{An Ensemble Approach for Incremental Learning in Nonstationary Environments}
+\subsubsection{Michael D. Muhlbaier and Robi Polikar, 2007}
+
+\paragraph{Mots clefs :} 
+
+\paragraph{Résumé :} L'article propose Learn$^{++}$.NSE NSE comme Non Stationnary Environment. On suppose que les données arrivent en par paquets, ou en batch. On suppose ici que les dernières données labélisées correspondent au concept le plus récent. Ainsi, à chaque fois qu'un bach de donnée labélisées arrive, on entraîne un nouveau modèle. On va ensuite regarder les taux d'erreur respectifs de chaque ancien modèle sur l'ensemble des paquets de données. On va ensuite attribué une pondération à chaque modèle qui va dépendre des performances de ceux-ci sur les paquets de données. L'erreur des modèles sur les paquets récents va prendre plus de poid que les erreurs anciennes. Dans le cas d'une dérive récurrente, on va observer le poid d'un modèle osciller.
+
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} L'article répond aux problèmes des dérives récurrentes.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles été explorées par d'autres articles ?} L'article ne prends pas en compte la séparation des paquets en concepts. En effet, deux concepts peuvent arriver au sein d'un même paquets si il sont trop long. S'il sont trop courts, alors les performances du modèle seront insatisfaisantes. La méthodologie utilise seulement les performances dans son discernement des concepts, un ajout de méthodes statistiques augmenterai surement la pertinence de la pondération. La méthodologie entraîne un modèle unique sans ce soucier des hyperparamètres.
+
+
+
+
+
+
+
+\subsection{Titre}
+\subsubsection{Auteurs, date de parution}
+
+\paragraph{Mots clefs :}
+
+\paragraph{Résumé :}
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?}
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
+
+
+
+
+\newpage
+
+
+
+
+
+
+\section{Méthodes de détéction non supervisées}
+
+\subsection{An adaptive algorithm for anomaly and novelty detection in evolving data streams}
+\subsubsection{Mohamed-Rafik Bouguelia, Slawomir Nowaczyk, Amir H. Payberah; 2018}
+
+\paragraph{Mots clefs :}Gas Network Generator, Self Organising Maps
+
+\paragraph{Résumé :}L'article propose une amélioration du modèle GNG, en apportant les modifications nécessaires pour une meilleure adaptabilité à un changement de distribution.
+
+L'algorithme des GNG est un algorithme non supervisé \textit{online}. On initialise un nombre $n$ de cluster où de sommets de même dimension que le jeu de donnée. À chaque apparition d'un exemple $x$, on calcul les deux sommets les plus proches. On va rajouter décaller le sommet le plus proche légèrement en direction du nouveau point, puis on trace une arrête entre les deux sommets les plus proches d'âge 0. On incrémente de 1 toutes les arrêtes, puis, on supprime les arrêtes d'âge supérieur à un seuil. Puis, on va supprimer tout les sommets isolés. Toutes les $\lambda$ itérations on va créer un nouveau sommet à partir du sommet existant ayant la distance moyenne entre ses points $x$ et son centre la plus élevées.
+
+Les problèmes de ce modèle est qu'un grand nombre de paramètres est nécessaire à son fonctionnement et donc que l'on manque d'adaptabilitée, que certains vieux neurones ne sont pas supprimés alors que peu utiles.
+
+L'algorithme proposé le GNG-A comme adaptive, l'adaptabilité signifie que l'initialisation des paramètres perd son importance les hyperparamètreds évoluant. Le processus de suppression et création des sommets n'est plus systématique, mais prends en compte la dérive. 
+
+\paragraph{À quelle(s) problématique(s) l'article répond ? } La paramétreisation des hyperparamètres n'est plus capitale, les sommets ne sont plus créés et suprimés de façon systématique. L'algorithme est maintenant utilisable complètement en ligne.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ? } On a ici un algorithem non supervisé. Adapter ces méthodes à un problème supervisé. Adapter au concepts récurents lors de la suppression en gardant en mémoire les anciens sommets. Ne traite pas les variables n'étant pas de type numériques.
+
+
+
+\subsection{Learning from Time-Changing Data with Adaptive Windowing}
+\subsubsection{A Bifet, R Gavalda , 2007}
+
+\paragraph{Mots clefs :} ADWIN
+
+\paragraph{Résumé :} Un algorithme de sélection de fenêtre d’apprentissage est présenté. L’algorithme conserve les n plus récentes observations dans une fenêtre $W$ de taille $n$ avant de la séparer en deux parties $W_1$ et $W_2$ de taille $n_1$ et $n_2$ tel que $n_1+n_2=n$. 
+
+Avec $m=\frac{1}{1 / n_{0}+1 / n_{1}} \text { (moyenne harmonique de } n_{0} \text { et } n_{1} )  $; $\delta^{\prime}=\frac{\delta}{n} \text{ et } $ $ \quad \epsilon_{c u t}=\sqrt{\frac{1}{2 m} \cdot \ln \frac{4}{\delta^{\prime}}}$. 
+
+Tant que l'on observe pas $\left|\hat{\mu}_{W_{0}}-\hat{\mu}_{W_{1}}\right| \geq \epsilon_{c u t}$ où $\hat{\mu}_{W_{0}}$ est la moyenne de la fenêtre $W_0$ et $\hat{\mu}_{W_{1}}$ celle de $W_1$, on supprime les observations les plus anciennes
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Détection d'une dérive, sélection des observations correspondant au concept le plus récent.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Utiliser ADWIN pour séparer les données en concept différents $C_1, C_2, ... C_i$ avec des statistiques tel que la moyenne, la variance les quantiles... Permettant, quand un nouveau concept apparaîtrait de vérifier si l'on ne dispose pas d'autres instances de ce concept dans le cas d'un concept récurrent.
+
+
+
+\section{Méthodes annexes}
+
+\subsection{Efficient Data Stream Classification via Probabilistic Adaptive Windows}
+\subsubsection{Albert Bifet, Jesse Read, Bernhard Pfahringer, Geoff Holmes; 2013}
+
+\paragraph{Mots clefs :}Memory optimisation, online learning 
+
+\paragraph{Résumé :} Ici l'article détaille un procédé pour garder en mémoire un échantillon représentatif des données, gardant avec une probabilité forte les observations récentes et une probabilité décroissante en fonction de l'âge les données anciennes. Couplée avec d'autres outils, les auteurs constatent un gain de performance.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Réduction de la mémoire, implémentation élégante avec probabilité de garder les exemple récents fortes.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Pour moi, il y a un petit problème d'implémentation car l'algorithme est très coûteux en terme de RAM pour des gains de performances faibles.
+
+
+
+
+\newpage
+
+
+
+
+
+
+\end{document}
