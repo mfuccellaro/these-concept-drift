@@ -149,6 +149,21 @@ $P_{i, j}^{v}=P\left(f_{i}=v \mid c_{j}\right), i \in[1, n], j \in[1, m], v \in 
 
 
 
+\subsection{Data Stream Classification Guided by Clustering on Non Stationary Environments and Extreme Verification Latency}
+\subsubsection{VMA Souza, DF Silva, J Gama, GE Batista , 2015}
+
+\paragraph{Mots clefs :} Semi-supervisé
+
+\paragraph{Résumé :} L'article présente une méthodologie semi-supervisé afin de prédire dans un contexte de dérive. Le contexte est un contexte de dérive incrémentale, le nombre de classes est supposé connu et ne change pas, on dispose initialement d'un nombre d'exemples labélisés.
+
+ À l'initialisation, on va atttribuer chaque exemple à un cluster selon sa classe. On va ensuite récupérer des exemples non labélisés. On va utiliser k-means pour les répartir en clusters. On utilise les centroïdes des clusters précédements définis comme centroïdes d'initialisations. Une fois les nouveaux points répartis en clusters, on va attribuer aux instances non labélisés composants les clusters le label du cluster de l'itération précédentes qui est le plus proche. Les nouveaux exemples labellisés, on peut réentraîner le modèle sur les exemples les plus récents.  On oscille ainsi entre classification supervisé et clustering.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?}
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
+
+
+
 
 
 
