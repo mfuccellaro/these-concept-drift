@@ -77,6 +77,21 @@ Les trois méthodes sont testées avec plusieurs jeux de données contre DDM, EC
 \paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} L'article ne compare pas les autres travaux, mais compare les différences de performances avec et sans la méthodologie.
 
 
+\subsection{Concept drift detection and adaptation with Hierarchical Hypothesis Testing}
+\subsubsection{Shujian Yu, Zubin Abraham, Heng Wang; 2019}
+
+\paragraph{Mots clefs} Statistical Tests, Hierarchical, Adaptive Training
+
+\paragraph{Résumé :} Afin de détecter une dérive conceptuelle de manière stable les auteurs mettent en place une méthodologie à deux niveaux. Un premier niveau détecte à travers l'instabilitées de 4 métriques dérivées du modèle une dérive. Les auteurs en utilise 4 car l'utilisation d'une comme dans d'autres papiers ne permet pas l'obtention d'un délais de détection rapide et de précision forte.
+
+Si une détection est relevée, alors un deuxième test est fait en comparant les performances du modèle entraîné sur les données d'avant la dérive et d'après. Les auteurs utilisent également une version adaptable de l'algorithme SVM permettant l'utilisation des données du concept précédent afin d'améliorer les performances du nouveau modèle, peu d'exemples d'entraînements étant disponibles après détéction d'un nouveau concept.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Les techniques développées permettent une détection plus prompte d'une dérive. Le modèle adaptable permets de bonnes performances malgrès le nombre faible d'observations.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Rendre d'autres algorithmes Adaptable (Lire  reférence 54).
+
+
+
 \subsection{Handling adversarial concept drift in streaming data}
 \subsubsection{Tegjyot Singh Sethi , Mehmed Kantardzic, 2017}
 
