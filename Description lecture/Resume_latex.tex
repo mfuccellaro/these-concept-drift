@@ -166,16 +166,41 @@ $P_{i, j}^{v}=P\left(f_{i}=v \mid c_{j}\right), i \in[1, n], j \in[1, m], v \in 
 
 \subsection{Data Stream Classification Guided by Clustering on Non Stationary Environments and Extreme Verification Latency}
 \subsubsection{VMA Souza, DF Silva, J Gama, GE Batista , 2015}
+\subsubsection{Cité 62 fois, SIAM}
 
 \paragraph{Mots clefs :} Semi-supervisé
 
-\paragraph{Résumé :} L'article présente une méthodologie semi-supervisé afin de prédire dans un contexte de dérive. Le contexte est un contexte de dérive incrémentale, le nombre de classes est supposé connu et ne change pas, on dispose initialement d'un nombre d'exemples labélisés.
+\paragraph{Résumé :} On dispose des labels seulement lors de l'initialisation et on est dans un contexte ou une dérive est présente.
+L'article présente une méthodologie semi-supervisé afin de prédire dans un contexte où il y a une dérive. Le contexte est un contexte de dérive incrémentale, le nombre de classes est supposé connu et ne change pas, on dispose initialement d'un nombre d'exemples labélisés.
 
- À l'initialisation, on va atttribuer chaque exemple à un cluster selon sa classe. On va ensuite récupérer des exemples non labélisés. On va utiliser k-means pour les répartir en clusters. On utilise les centroïdes des clusters précédements définis comme centroïdes d'initialisations. Une fois les nouveaux points répartis en clusters, on va attribuer aux instances non labélisés composants les clusters le label du cluster de l'itération précédentes qui est le plus proche. Les nouveaux exemples labellisés, on peut réentraîner le modèle sur les exemples les plus récents.  On oscille ainsi entre classification supervisé et clustering.
+ À l'initialisation, on va attribuer chaque exemple à un cluster selon sa classe. On aura donc autant de clusters que de classes. Les centroïdes sont calculés.
+ 
+ On va ensuite récupérer des exemples non labélisés, on va utiliser k-means pour les répartir en clusters. Pour ce faire, lors de l'initialisation, on utilise les centroïdes des clusters précédements définis, par les classes, comme centroïdes d'initialisations. Une fois les nouveaux points répartis en clusters, on va attribuer aux instances non labélisés composants les clusters le label du cluster de l'itération précédentes qui est le plus proche. Les nouveaux exemples labellisés, on peut réentraîner le modèle sur les exemples les plus récents. 
+On peut ainsi recommencer l'itération dès l'arrivé de nouveau exemples. On oscille ainsi entre classification supervisé et clustering.
 
-\paragraph{À quelle(s) problématique(s) l'article répond ?}
+\paragraph{À quelle(s) problématique(s) l'article répond ?} L'article apporte une méthode pour traiter la dérive dans un contexte semi-supervisé. Dans un contexte où les labels des observations ne sont disponibles que lors de l'initialisation.
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} On peut imaginer que dans le cas d'une dérive de forte amplitude brusque, ou lors de dérives qui s'enchaîne sur une temporalité longue, le système perde en efficacité.
+
+
+
+
+\subsection{A Novel Concept Drift Detection Method for Incremental Learning in Nonstationary Environmnents}
+\subsubsection{Z Yang, S Al-Dahidi, P Baraldi, E Zio, 2019}
+
+\subsubsection{Cité 4 fois, ieeexplore.ieee.org}
+
+\paragraph{Mots clefs :} Détection par analyse du modèle
+
+\paragraph{Résumé :} L'article détaille une méthode qui, pour détecter la dérive, va réentrainer un modèle (ELM) Extreme Learning Machines, qui est un modèle type réseau de neurones à une unique couche cachée. Ce type de modèle à la particularité qu'il peut être actualisé avec l'arrivée de nouvelles données quel que soit leur nombre.
+
+Une fois le modèle entraîné, à l'arrivé de nouveaux exemples labélisés, un réentrainement s'opère. La différence des poids des neurones de la couche caché du modèle réentrainé avec les poids du modèle avant réentrainement est calculée. Les auteurs dévelopent une distance faite pour mesurer l'écart entre les poids des deux modèles.
+
+Si cette différence est supérieure à un seuil dont la méthodologie de détermination est détaillé dans l'article. Un calcul, tiré de travaux récents pour quantifier le nombre d'exemples labélisés nécessaires à un réentraînement efficaces du point de vue des performances prédictives et en terme de coût caclulatoire.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Comment détecter une dérive avec le modèle sans regarder les performances de celui-ci. Comment trouver le compromi idéal pour un savoir quand faire les réentraînements.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Utiliser une méthodologie similaire sur d'autre algorithmes prédictif, calculer une distance entre les arbres décision, où trouver un seuil a partir duquel un changement des coefficient de la regression linéaire indiquerai une dérive.
 
 
 
