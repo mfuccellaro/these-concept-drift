@@ -43,10 +43,10 @@ FSDD utilise le test de Fischer quand le nombre d'erreurs où de prédicitions j
 
 FTDD utilise le test de Fischer exclusivement.
 
-Les trois méthodes sont testées avec plusieurs jeux de données contre DDM, ECDD, SEED, FHDDM, STEPD et sortent avec en moyenne de meilleur résultats.
+Les trois méthodes sont testées avec plusieurs jeux de données contre DDM, ECDD, SEED, FHDDM, STEPD et sortent avec en moyenne de meilleurs résultats.
 \paragraph{À quelle(s) problématique(s) l'article répond ?} Amélioration du temps de calcul et des performances de plusieurs méthodes
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles été explorées par d'autres articles ?} Il reste à explorer plus de test statistiques et étudier une possible combinaison, càd l'utilisation de plusieurs test en simultané et un méta modèle. Experimenter l'impact de la taille des fenêtres d'observations priss en compte (elles sont brièvement étudiées).
+\paragraph{Quelles sont les pistes à explorer et ont-elles été explorées par d'autres articles ?} Il reste à explorer plus de tests statistiques et étudier une possible combinaison, càd l'utilisation de plusieurs tests en simultané et un méta modèle. Expérimenter l'impact de la taille des fenêtres d'observations prises en compte (elles sont brièvement étudiées).
 
 
 
@@ -70,7 +70,7 @@ Les trois méthodes sont testées avec plusieurs jeux de données contre DDM, EC
 
 \paragraph{Mots clefs}
 
-\paragraph{Résumé :} Le but de la méthode développée ici est d'utiliser des intervalles de confiances de la loi normale appliquées aux erreures faite par le modèle pour détecter une dérive. L'erreur devant logiquement diminuer au fur et à mesure que le modèle dispose de donnée d'entraînement faisant l'hypothèse que la distribution sous-jacente est la même, quand celle-ci augmente au delà d'un certain seuil, on est en présence d'une dérive.
+\paragraph{Résumé :} Le but de la méthode développée ici est d'utiliser des intervalles de confiance de la loi normale appliqué aux erreurs faites par le modèle pour détecter une dérive. L'erreur devant logiquement diminuer au fur et à mesure que le modèle dispose de données d'entraînement faisant l'hypothèse que la distribution sous-jacente est la même, quand celle-ci augmente au delà d'un certain seuil, on est en présence d'une dérive.
 
 \paragraph{À quelle(s) problématique(s) l'article répond ?} L'article propose une méthodologie de détection de dérive sur les scores des modèles.
 
@@ -82,11 +82,11 @@ Les trois méthodes sont testées avec plusieurs jeux de données contre DDM, EC
 
 \paragraph{Mots clefs} Statistical Tests, Hierarchical, Adaptive Training
 
-\paragraph{Résumé :} Afin de détecter une dérive conceptuelle de manière stable les auteurs mettent en place une méthodologie à deux niveaux. Un premier niveau détecte à travers l'instabilitées de 4 métriques dérivées du modèle une dérive. Les auteurs en utilise 4 car l'utilisation d'une comme dans d'autres papiers ne permet pas l'obtention d'un délais de détection rapide et de précision forte.
+\paragraph{Résumé :} Afin de détecter une dérive conceptuelle de manière stable, les auteurs mettent en place une méthodologie à deux niveaux. Un premier niveau détecte à travers l'instabilitée de 4 métriques relatant les performances du modèle, une dérive. Les auteurs en utilise 4 car l'utilisation d'une seule, comme dans d'autres méthodologies exisantes, ne permet pas l'obtention d'un délais de détection rapide et de précision forte.
 
 Si une détection est relevée, alors un deuxième test est fait en comparant les performances du modèle entraîné sur les données d'avant la dérive et d'après. Les auteurs utilisent également une version adaptable de l'algorithme SVM permettant l'utilisation des données du concept précédent afin d'améliorer les performances du nouveau modèle, peu d'exemples d'entraînements étant disponibles après détéction d'un nouveau concept.
 
-\paragraph{À quelle(s) problématique(s) l'article répond ?} Les techniques développées permettent une détection plus prompte d'une dérive. Le modèle adaptable permets de bonnes performances malgrès le nombre faible d'observations.
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Les techniques développées permettent une détection plus prompte d'une dérive. Le modèle adaptable permet de bonnes performances malgrès le nombre faible d'observations.
 
 \paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Rendre d'autres algorithmes Adaptable (Lire  reférence 54).
 
@@ -154,7 +154,11 @@ $P_{i, j}^{v}=P\left(f_{i}=v \mid c_{j}\right), i \in[1, n], j \in[1, m], v \in 
 
 \paragraph{Mots clefs :} 
 
-\paragraph{Résumé :} L'article propose Learn$^{++}$.NSE NSE comme Non Stationnary Environment. On suppose que les données arrivent en par paquets, ou en batch. On suppose ici que les dernières données labélisées correspondent au concept le plus récent. Ainsi, à chaque fois qu'un bach de donnée labélisées arrive, on entraîne un nouveau modèle. On va ensuite regarder les taux d'erreur respectifs de chaque ancien modèle sur l'ensemble des paquets de données. On va ensuite attribué une pondération à chaque modèle qui va dépendre des performances de ceux-ci sur les paquets de données. L'erreur des modèles sur les paquets récents va prendre plus de poid que les erreurs anciennes. Dans le cas d'une dérive récurrente, on va observer le poid d'un modèle osciller.
+\paragraph{Résumé :} L'article propose Learn$^{++}$.NSE NSE comme Non Stationnary Environment. On suppose que les données arrivent en par paquets, ou en batch. On suppose ici que les dernières données labélisées correspondent au concept le plus récent. Ainsi, à chaque fois qu'un bach de donnée labélisées arrive, on entraîne un nouveau modèle. On va ensuite regarder les taux d'erreur respectifs de chaque ancien modèle sur l'ensemble des paquets de données. 
+
+On va ensuite attribuer une pondération à chaque modèle qui va dépendre des performances de ceux-ci sur les paquets de données. L'erreur des modèles sur les paquets récents va prendre plus de poid que les erreurs anciennes. Dans le cas d'une dérive récurrente, on va observer le poid d'un modèle osciller.
+
+Le résultat de cette pondération va déterminer le poid de chacun des modèles dans la prédiction à venir.
 
 
 \paragraph{À quelle(s) problématique(s) l'article répond ?} L'article répond aux problèmes des dérives récurrentes.
@@ -207,16 +211,18 @@ Si cette différence est supérieure à un seuil dont la méthodologie de déter
 
 
 
-\subsection{Titre}
-\subsubsection{Auteurs, date de parution}
+\subsection{Concept Drift detection and adaptation in Big Imbalance industrial IoT data using ensemble learning method of offline classifiers}
+\subsubsection{Chun-Cheng Lin, Der-Jiunn Deng, 2019}
 
-\paragraph{Mots clefs :}
+\subsubsection{Cité N fois, Revue}
 
-\paragraph{Résumé :}
+\paragraph{Mots clefs :} Imbalanced Problems
 
-\paragraph{À quelle(s) problématique(s) l'article répond ?}
+\paragraph{Résumé :} L'article propose une solution d'apprentissage automatique sur un problème contrebalancé en présence d'une dérive conceptuelle. Le traitement des données contrebalancé ce fait par la teechnique SMOTE, qui permets une création de points sythétiques de la classe minoritaire. La détection de la dérive ce fait par une surveillance des performances du modèle par des seuils, on a affaire a une detection par seuil statistiques de 4 métriques dérivé des prédictions du modèle et de la vérité.
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Adresser un problème contrebalancé.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} L'évaluation sur données réelles est faite, mais sans comparé à d'autres méthodologies.
 
 
 
