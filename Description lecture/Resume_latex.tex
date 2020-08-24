@@ -64,7 +64,6 @@ Les trois méthodes sont testées avec plusieurs jeux de données contre DDM, EC
 
 
 
-
 \subsection{Learning with Drift Detection}
 \subsubsection{João Gama, Pedro Medas, Gladys Castillo, Pedro Rodrigues, 2004}
 
@@ -86,9 +85,9 @@ Les trois méthodes sont testées avec plusieurs jeux de données contre DDM, EC
 
 Si une détection est relevée, alors un deuxième test est fait en comparant les performances du modèle entraîné sur les données d'avant la dérive et d'après. Les auteurs utilisent également une version adaptable de l'algorithme SVM permettant l'utilisation des données du concept précédent afin d'améliorer les performances du nouveau modèle, peu d'exemples d'entraînements étant disponibles après détéction d'un nouveau concept.
 
-\paragraph{À quelle(s) problématique(s) l'article répond ?} Les techniques développées permettent une détection plus prompte d'une dérive. Le modèle adaptable permet de bonnes performances malgrès le nombre faible d'observations.
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Les techniques développées permettent une détection plus rapide de la dérive. Le modèle adaptable permet de bonnes performances malgrès le nombre faible d'observations.
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Rendre d'autres algorithmes Adaptable (Lire  reférence 54).
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Rendre d'autres algorithmes Adaptables (Lire  reférence 54).
 
 
 
@@ -123,9 +122,9 @@ Si une détection est relevée, alors un deuxième test est fait en comparant le
 
 \paragraph{Mots clefs}
 
-\paragraph{Résumé :} On suppose que les données arrivent par batch où packets, on va les projetter les données dans un espace puis, un algorithme non supervisé va les grouper par concepts, l'espace de projection permettant de comparer les instances avec la distance euclidienne. Chaque concept différents dispose de son modèle prédictif. Quand une nouvelle série d'observations arrive, elle est projeté dans l'espace, si elle ne correspond à aucun concept, on en créer un nouveau, sinon, on score.
+\paragraph{Résumé :} On suppose que les données arrivent par séries où packets, on va les projeter les données dans un espace, puis, un algorithme non supervisé va les grouper par concepts, l'espace de projection permettant de comparer les instances avec la distance euclidienne. Chaque concept différent dispose de son modèle prédictif. Quand une nouvelle série d'observations arrive, elle est projeté dans l'espace, si elle ne correspond à aucun concept, on en créé un nouveau, sinon, on score.
 
-La projection des variables ce fait comme: $z_{i}=\left\{\begin{array}{l}
+La projection des variables se fait comme ceci: $z_{i}=\left\{\begin{array}{l}
 \left\{P_{i, j}^{v}: j=1, \ldots, m, v \in V_{i}\right\}, \quad \text { si } f_{i} \text { est nominale } \\
 \left\{\mu_{i, j}, \sigma_{i, j}: j=1, \ldots, m\right\}, \quad \text { si } f_{i} \text { est numérique }
 \end{array}\right.$
@@ -133,7 +132,7 @@ Et où:
 $P_{i, j}^{v}=P\left(f_{i}=v \mid c_{j}\right), i \in[1, n], j \in[1, m], v \in V_{i}$. Où $V_{i}$ est l'ensemble des valeurs possible que peut prendre la variable $f_{i}$.
 \paragraph{À quelle(s) problématique(s) l'article répond ?} À la projection des espaces des données dans un espace euclidien.
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} L'article fait l'hypothèse que des données d'un même batch appartienne aux mêmes concepts.
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} L'article fait l'hypothèse que des données d'un même batch appartiennent aux mêmes concepts.
 
 
 \subsection{Learning classification rules for telecom  customer call data under concept drift}
@@ -141,7 +140,7 @@ $P_{i, j}^{v}=P\left(f_{i}=v \mid c_{j}\right), i \in[1, n], j \in[1, m], v \in 
 
 \paragraph{Mots clefs :}
 
-\paragraph{Résumé :} L'article développe plusieurs versions d'une méthodologie basée sur les arbres de décisions.  On suppose les données arrivant par batchs. Un attribut de temporalité est introduit dans le jeu de donnée. Un arbre de décision est fait sur le dataset. Si l’attribut de temps est présent dans les décisions, alors on a un drift. Cela permets également de voir quelles variables ont été impactées par le drift. Seul les règle émanant des branches qui se trouve dans la branche de l’arbre de décision où un attribut temporel est présent sont supprimés. Les règles qui n’ont pas été impactées restent.
+\paragraph{Résumé :} L'article développe plusieurs versions d'une méthodologie basée sur les arbres de décisions.  On suppose que les données arrivent par batchs. Un attribut de temporalité est introduit dans le jeu de données. Un arbre de décision est fait sur le dataset. Si l’attribut de temps est présent dans les décisions, alors on a un drift. Cela permet également de voir quelles variables ont été impactées par le drift. Seul les règle émanant des branches qui se trouvent dans la branche de l’arbre de décision où un attribut temporel est présent sont supprimées. Les règles qui n’ont pas été impactées restent.
 
 \paragraph{À quelle(s) problématique(s) l'article répond ?} Utiliser la temporalité afin de trouver les attributs en dépendant.
 
@@ -154,16 +153,16 @@ $P_{i, j}^{v}=P\left(f_{i}=v \mid c_{j}\right), i \in[1, n], j \in[1, m], v \in 
 
 \paragraph{Mots clefs :} 
 
-\paragraph{Résumé :} L'article propose Learn$^{++}$.NSE NSE comme Non Stationnary Environment. On suppose que les données arrivent en par paquets, ou en batch. On suppose ici que les dernières données labélisées correspondent au concept le plus récent. Ainsi, à chaque fois qu'un bach de donnée labélisées arrive, on entraîne un nouveau modèle. On va ensuite regarder les taux d'erreur respectifs de chaque ancien modèle sur l'ensemble des paquets de données. 
+\paragraph{Résumé :} L'article propose Learn$^{++}$.NSE NSE comme Non Stationnary Environment. On suppose que les données arrivent en par paquets, ou en batch. On suppose ici que les dernières données labélisées correspondent au concept le plus récent. Ainsi, à chaque fois qu'un batch de données labélisées arrive, on entraîne un nouveau modèle. On va ensuite regarder les taux d'erreurs respectifs de chaque ancien modèle sur l'ensemble des paquets de données. 
 
-On va ensuite attribuer une pondération à chaque modèle qui va dépendre des performances de ceux-ci sur les paquets de données. L'erreur des modèles sur les paquets récents va prendre plus de poid que les erreurs anciennes. Dans le cas d'une dérive récurrente, on va observer le poid d'un modèle osciller.
+On va ensuite attribuer une pondération à chaque modèle qui va dépendre des performances de ceux-ci sur les paquets de données. L'erreur des modèles sur les paquets récents va prendre plus de d'importance que les erreurs anciennes. Dans le cas d'une dérive récurrente, on va observer le poid d'un modèle osciller.
 
 Le résultat de cette pondération va déterminer le poid de chacun des modèles dans la prédiction à venir.
 
 
 \paragraph{À quelle(s) problématique(s) l'article répond ?} L'article répond aux problèmes des dérives récurrentes.
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles été explorées par d'autres articles ?} L'article ne prends pas en compte la séparation des paquets en concepts. En effet, deux concepts peuvent arriver au sein d'un même paquets si il sont trop long. S'il sont trop courts, alors les performances du modèle seront insatisfaisantes. La méthodologie utilise seulement les performances dans son discernement des concepts, un ajout de méthodes statistiques augmenterai surement la pertinence de la pondération. La méthodologie entraîne un modèle unique sans ce soucier des hyperparamètres.
+\paragraph{Quelles sont les pistes à explorer et ont-elles été explorées par d'autres articles ?} L'article ne prend pas en compte la séparation des paquets en concepts. En effet, deux concepts peuvent arriver au sein d'un même paquet s'ils sont trop longs. S'il sont trop courts, alors les performances du modèle seront insatisfaisantes. La méthodologie utilise seulement les performances dans son discernement des concepts, un ajout de méthodes statistiques augmenterait sûrement la pertinence de la pondération. La méthodologie entraîne un modèle unique sans ce soucier des hyperparamètres.
 
 
 
@@ -174,17 +173,17 @@ Le résultat de cette pondération va déterminer le poid de chacun des modèles
 
 \paragraph{Mots clefs :} Semi-supervisé
 
-\paragraph{Résumé :} On dispose des labels seulement lors de l'initialisation et on est dans un contexte ou une dérive est présente.
-L'article présente une méthodologie semi-supervisé afin de prédire dans un contexte où il y a une dérive. Le contexte est un contexte de dérive incrémentale, le nombre de classes est supposé connu et ne change pas, on dispose initialement d'un nombre d'exemples labélisés.
+\paragraph{Résumé :} On dispose des labels seulement lors de l'initialisation et c'est un contexte où une dérive est présente.
+L'article présente une méthodologie semi-supervisée afin de prédire dans un contexte où il y a une dérive. Le contexte est un contexte de dérive incrémentale, le nombre de classes est supposé connu et ne change pas, on dispose initialement d'un nombre d'exemples labélisés.
 
  À l'initialisation, on va attribuer chaque exemple à un cluster selon sa classe. On aura donc autant de clusters que de classes. Les centroïdes sont calculés.
  
- On va ensuite récupérer des exemples non labélisés, on va utiliser k-means pour les répartir en clusters. Pour ce faire, lors de l'initialisation, on utilise les centroïdes des clusters précédements définis, par les classes, comme centroïdes d'initialisations. Une fois les nouveaux points répartis en clusters, on va attribuer aux instances non labélisés composants les clusters le label du cluster de l'itération précédentes qui est le plus proche. Les nouveaux exemples labellisés, on peut réentraîner le modèle sur les exemples les plus récents. 
-On peut ainsi recommencer l'itération dès l'arrivé de nouveau exemples. On oscille ainsi entre classification supervisé et clustering.
+ On va ensuite récupérer des exemples non labélisés, utiliser k-means pour les répartir en clusters. Pour cela, lors de l'initialisation, on utilise les centroïdes des clusters précédement définis, par les classes, comme centroïdes d'initialisation. Une fois les nouveaux points répartis en clusters, on va attribuer aux instances non labélisées composant les clusters, le label du cluster de l'itération précédente qui est le plus proche. Les nouveaux exemples labelisés, on peut réentraîner le modèle sur les exemples les plus récents. 
+On peut ainsi recommencer l'itération dès l'arrivé de nouveau exemples. On oscille ainsi entre classification supervisée et clustering.
 
 \paragraph{À quelle(s) problématique(s) l'article répond ?} L'article apporte une méthode pour traiter la dérive dans un contexte semi-supervisé. Dans un contexte où les labels des observations ne sont disponibles que lors de l'initialisation.
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} On peut imaginer que dans le cas d'une dérive de forte amplitude brusque, ou lors de dérives qui s'enchaîne sur une temporalité longue, le système perde en efficacité.
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} On peut imaginer que dans le cas d'une dérive de forte amplitude brusque, ou lors de dérives qui s'enchaînent sur une temporalité longue, le système perde en efficacité.
 
 
 
@@ -198,13 +197,13 @@ On peut ainsi recommencer l'itération dès l'arrivé de nouveau exemples. On os
 
 \paragraph{Résumé :} L'article détaille une méthode qui, pour détecter la dérive, va réentrainer un modèle (ELM) Extreme Learning Machines, qui est un modèle type réseau de neurones à une unique couche cachée. Ce type de modèle à la particularité qu'il peut être actualisé avec l'arrivée de nouvelles données quel que soit leur nombre.
 
-Une fois le modèle entraîné, à l'arrivé de nouveaux exemples labélisés, un réentrainement s'opère. La différence des poids des neurones de la couche caché du modèle réentrainé avec les poids du modèle avant réentrainement est calculée. Les auteurs dévelopent une distance faite pour mesurer l'écart entre les poids des deux modèles.
+Une fois le modèle entraîné, à l'arrivé de nouveaux exemples labélisés, un réentrainement s'opère. La différence de poid des neurones de la couche caché du modèle réentrainé avec les poids du modèle avant réentrainement est calculée. Les auteurs développent une distance faite pour mesurer l'écart entre les poids des deux modèles.
 
-Si cette différence est supérieure à un seuil dont la méthodologie de détermination est détaillé dans l'article. Un calcul, tiré de travaux récents pour quantifier le nombre d'exemples labélisés nécessaires à un réentraînement efficaces du point de vue des performances prédictives et en terme de coût caclulatoire.
+Si cette différence est supérieure à un seuil, dont la méthodologie de détermination est détaillé dans l'article. Un calcul, tiré de travaux récents pour quantifier le nombre d'exemples labélisés nécessaires à un réentraînement efficaces du point de vue des performances prédictives et en terme de coût caclulatoire.
 
-\paragraph{À quelle(s) problématique(s) l'article répond ?} Comment détecter une dérive avec le modèle sans regarder les performances de celui-ci. Comment trouver le compromi idéal pour un savoir quand faire les réentraînements.
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Comment détecter une dérive avec le modèle sans regarder les performances de celui-ci ? Comment trouver le compromi idéal pour un savoir quand faire les réentraînements ?
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Utiliser une méthodologie similaire sur d'autre algorithmes prédictif, calculer une distance entre les arbres décision, où trouver un seuil a partir duquel un changement des coefficient de la regression linéaire indiquerai une dérive.
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Utiliser une méthodologie similaire sur d'autre algorithmes prédictif, calculer une distance entre les arbres de décisions, où trouver un seuil a partir duquel un changement des coefficients de la regression linéaire indiquerait une dérive.
 
 
 
@@ -218,7 +217,7 @@ Si cette différence est supérieure à un seuil dont la méthodologie de déter
 
 \paragraph{Mots clefs :} Imbalanced Problems
 
-\paragraph{Résumé :} L'article propose une solution d'apprentissage automatique sur un problème contrebalancé en présence d'une dérive conceptuelle. Le traitement des données contrebalancé ce fait par la teechnique SMOTE, qui permets une création de points sythétiques de la classe minoritaire. La détection de la dérive ce fait par une surveillance des performances du modèle par des seuils, on a affaire a une detection par seuil statistiques de 4 métriques dérivé des prédictions du modèle et de la vérité.
+\paragraph{Résumé :} L'article propose une solution d'apprentissage automatique sur un problème contrebalancé en présence d'une dérive conceptuelle. Le traitement des données contrebalancées ce fait par la technique SMOTE, qui permet une création de points sythétiques de la classe minoritaire. La détection de la dérive se fait par une surveillance des performances du modèle par des seuils, on a affaire a une détection par seuil statistique de 4 métriques dérivés des prédictions du modèle et de la vérité.
 
 \paragraph{À quelle(s) problématique(s) l'article répond ?} Adresser un problème contrebalancé.
 
@@ -243,15 +242,15 @@ Si cette différence est supérieure à un seuil dont la méthodologie de déter
 
 \paragraph{Résumé :}L'article propose une amélioration du modèle GNG, en apportant les modifications nécessaires pour une meilleure adaptabilité à un changement de distribution.
 
-L'algorithme des GNG est un algorithme non supervisé \textit{online}. On initialise un nombre $n$ de cluster où de sommets de même dimension que le jeu de donnée. À chaque apparition d'un exemple $x$, on calcul les deux sommets les plus proches. On va rajouter décaller le sommet le plus proche légèrement en direction du nouveau point, puis on trace une arrête entre les deux sommets les plus proches d'âge 0. On incrémente de 1 toutes les arrêtes, puis, on supprime les arrêtes d'âge supérieur à un seuil. Puis, on va supprimer tout les sommets isolés. Toutes les $\lambda$ itérations on va créer un nouveau sommet à partir du sommet existant ayant la distance moyenne entre ses points $x$ et son centre la plus élevées.
+L'algorithme des GNG est un algorithme non supervisé \textit{online}. On initialise un nombre $n$ de clusters ou de sommets de même dimension que le jeu de données. À chaque apparition d'un exemple $x$, on calcul les deux sommets les plus proches. On va décaler le sommet le plus proche légèrement en direction du nouveau point, puis on trace une arrête entre les deux sommets les plus proches d'âge 0. On incrémente de 1 toutes les arrêtes, puis, on supprime les arrêtes d'âge supérieur à un seuil. Puis, on va supprimer tous les sommets isolés. Toutes les $\lambda$ itérations on va créer un nouveau sommet à partir du sommet existant ayant la distance moyenne entre ses points $x$ et le centre la plus élevées.
 
-Les problèmes de ce modèle est qu'un grand nombre de paramètres est nécessaire à son fonctionnement et donc que l'on manque d'adaptabilitée, que certains vieux neurones ne sont pas supprimés alors que peu utiles.
+Le problème de ce modèle est qu'un grand nombre de paramètres est nécessaire à son fonctionnement et donc que l'on manque d'adaptabilitée, que certains vieux neurones ne sont pas supprimés alors que peu utiles.
 
-L'algorithme proposé le GNG-A comme adaptive, l'adaptabilité signifie que l'initialisation des paramètres perd son importance les hyperparamètreds évoluant. Le processus de suppression et création des sommets n'est plus systématique, mais prends en compte la dérive. 
+L'algorithme proposé le GNG-A comme adaptive, l'adaptabilité signifie que l'initialisation des paramètres perd son importance les hyperparamètres évoluant. Le processus de suppression et création des sommets n'est plus systématique, mais prend en compte la dérive. 
 
-\paragraph{À quelle(s) problématique(s) l'article répond ? } La paramétreisation des hyperparamètres n'est plus capitale, les sommets ne sont plus créés et suprimés de façon systématique. L'algorithme est maintenant utilisable complètement en ligne.
+\paragraph{À quelle(s) problématique(s) l'article répond ? } La paramétrisation des hyperparamètres n'est plus capitale, les sommets ne sont plus créés et suprimés de façon systématique. L'algorithme est maintenant utilisable complètement en ligne.
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ? } On a ici un algorithem non supervisé. Adapter ces méthodes à un problème supervisé. Adapter au concepts récurents lors de la suppression en gardant en mémoire les anciens sommets. Ne traite pas les variables n'étant pas de type numériques.
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ? } On a ici un algorithme non supervisé. Adapter ces méthodes à un problème supervisé. Adapter au concepts récurrents lors de la suppression en gardant en mémoire les anciens sommets. Ne traite pas les variables n'étant pas de type numériques.
 
 
 
@@ -268,7 +267,7 @@ Tant que l'on observe pas $\left|\hat{\mu}_{W_{0}}-\hat{\mu}_{W_{1}}\right| \geq
 
 \paragraph{À quelle(s) problématique(s) l'article répond ?} Détection d'une dérive, sélection des observations correspondant au concept le plus récent.
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Utiliser ADWIN pour séparer les données en concept différents $C_1, C_2, ... C_i$ avec des statistiques tel que la moyenne, la variance les quantiles... Permettant, quand un nouveau concept apparaîtrait de vérifier si l'on ne dispose pas d'autres instances de ce concept dans le cas d'un concept récurrent.
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Utiliser ADWIN pour séparer les données en concepts différents $C_1, C_2, ... C_i$ avec des statistiques telles que la moyenne, la variance, les quantiles... Cela permettrait, quand un nouveau concept apparaîtrait de vérifier si l'on ne dispose pas d'autres instances de ce concept dans le cas d'un concept récurrent.
 
 
 
@@ -281,9 +280,9 @@ Tant que l'on observe pas $\left|\hat{\mu}_{W_{0}}-\hat{\mu}_{W_{1}}\right| \geq
 
 \paragraph{Résumé :} Ici l'article détaille un procédé pour garder en mémoire un échantillon représentatif des données, gardant avec une probabilité forte les observations récentes et une probabilité décroissante en fonction de l'âge les données anciennes. Couplée avec d'autres outils, les auteurs constatent un gain de performance.
 
-\paragraph{À quelle(s) problématique(s) l'article répond ?} Réduction de la mémoire, implémentation élégante avec probabilité de garder les exemple récents fortes.
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Réduction de la mémoire, implémentation élégante avec probabilité de garder les exemples récents fortes.
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Pour moi, il y a un petit problème d'implémentation car l'algorithme est très coûteux en terme de RAM pour des gains de performances faibles.
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Pour moi, il y a un petit problème d'implémentation car l'algorithme est très coûteux en terme de RAM pour des gains de performance faibles.
 
 
 
