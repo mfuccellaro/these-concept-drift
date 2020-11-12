@@ -9,6 +9,7 @@
 \usepackage{listings}
 \usepackage{scrextend}
 \usepackage{xcolor}
+\usepackage{hyperref}
 \usepackage[toc,page]{appendix}
 \usepackage[margin=2 cm]{geometry}
 %\usepackage[symbols]{circuitikz}
@@ -226,6 +227,71 @@ Si cette différence est supérieure à un seuil, dont la méthodologie de déte
 
 
 
+
+
+\subsection{Concept Drift Adaptation by exploiting historical knowledge}
+\subsubsection{Yu Sun, Ke Tang, Zexuan Zhu, Xin Yao, 2018}
+
+\subsubsection{Cité 49 fois, IEEE Explore}
+
+\paragraph{Mots clefs :} 
+
+\paragraph{Résumé :} L'article détaille une méthode : DTEL pour prédire en présence de dérive. La méthodologie conserve un pool de modèles (des arbres de décisions) de taille fixe. On suppose les données arrivant par batch $D$. 
+A l'arrivé d'un batch labélisé à l'instant t: 
+\begin{itemize}
+	\item Un nouveau modèle est entrainé sur les données du batch $D_t$
+	\item Les anciens modèles sont actualisés de la façon suivante: Pour chacun des anciens modèles, les données du nouveau batch sont répartis dans les feuilles de l'arbre et les probabilités des feuilles sont actualisés en conséquence. Les feuilles n'ayant pas atteint un critère de stop continuent d'être séparées avec les nouvelles données jusqu'à ce que le critère de stop prenne effet. Cela permet de garder la structure de l'arbre entraîné sur des données antérieures tout en prenant en compte le batch $D_t$.
+	\item  On ajoute le nouveau modèle au pool, et si la taille du pool excède un la taille maximum, on retire le modèle apportant le moins d'originalité selon la mesure : $\operatorname{div}(S)=1-\frac{1}{\sum_{1 \leq i \neq j \leq m} 1} \sum_{1 \leq i \neq j \leq m} Q\left(f_{i}, f_{j}\right)$ où $Q\left(f_{i}, f_{j}\right)=\frac{N^{11} N^{00}-N^{01} N^{10}}{N^{11} N^{00}+N^{01} N^{10}}$ tel que $N^{ab}$ soit le nombre d'exemple tel que le modèle $f_i$ prédise $a$ et que le modèle $f_j$ prédise $b$. Ici 1 représente une classification correcte, et 0 une erreur.
+\end{itemize}
+
+Les  modifications avec les données du nouveau batch sur les anciens modèles sont temporaires et les modèles retrouvent leurs état d'origine avec l'arrivé d'un nouveau batch labélisé. Le poids qu'a chacun des modèles dans la prédiction finale est calculé en fonction des performances de ceux-ci sur le batch $D_t$
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} 
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} 
+
+
+
+
+\subsection{Handling concept drift via model reuse}
+\subsubsection{Peng Zhao, Le-Wen Cai, Zhi-Hua Zhou, 2019}
+
+\subsubsection{Cité 6 fois, Springer}
+
+\paragraph{Mots clefs :} Ensemble model
+
+\paragraph{Résumé :} On suppose les données arrivant de manière incrémentale et les labels arrivant peut après. La méthodologie utilise un pool de modèles linéraires. Un nouveau modèle est ajouté au pool quand une nouvelle dérive à été détectée où lorsque un nombre $p$ d'exemples ont été vu depuis le dernier entraînement. Ici on utilise ADWIN comme detecteur de dérive. 
+
+La contribution de chacun des modèles est basé sur les perfomances de ceux si sur les derniers exemples labélisés. Lors de l'ajout d'un modèle ce dernier est entraîner en prenant compte des poids des modèles du pool. $$\hat{\mathbf{w}}_{k}=\arg \min _{\mathbf{w}}\left\{\frac{1}{m} \sum_{i=1}^{m} \ell\left(\left\langle\mathbf{w}, \mathbf{x}_{i}\right\rangle, y_{i}\right)+\mu \Omega\left(\mathbf{w}, \mathbf{w}_{p}\right)\right\}$$
+
+où $l$ est la fonction coût, $x_i$ et $y_i$ les données du dernier batch $S_k$. On a $\mathbf{w}_{p}=\sum_{j=1}^{k-1} \beta_{j} \hat{\mathbf{w}}_{j}$ où $\beta_j$ est le poid du modèle $h_j$. $\Omega$ est la fonction de pénalisation.
+
+Si le nombre de modèle est superieur de 1 à la taille du pool, on supprime le plus ancien.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} 
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}  Faire un algorithme ayant de bonne performance quand on a une abscence de y immédiate. Tel que les perfomances ne se dégradent pas trop, même si un drift à été détecté et qu'aucun exemple labélisé on été reçu. Avec une double mesure.
+
+
+
+
+
+
+
+
+\subsection{Reacting to Different Types of Concept Drift: The Accuracy Updated Ensemble Algorithm}
+\subsubsection{Dariusz Brzezinski and Jerzy Stefanowski, 2014}
+
+\subsubsection{Cité N fois, }
+
+\paragraph{Mots clefs :} Ensemble model,
+
+\paragraph{Résumé :} Les auteurs proposent dans leurs approche, d'utiliser un pool de modèle, les modèles ici sont des arbres de décision, mais tous les algorithmes pouvant être réentrainés en ligne peuvent être choisi. Avec l'arrivée d'un nouveau batch, un nouveau modèle est entraîné. Les poids que prennent chaque algorithme du pool est calculé en fonction des performances obtenues sur le dernier batch. 
+
+Les anciens modèles sont actualisés en prenant en compte le nouveau batch. Si la taille en mémoire des modèles dépasse un seuil, alors les modèles sont élagués.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} L'article apporte une réponse avec à la question de taille de batch. Cette méthodologie peut s'accomoder de tout petit batch.
+
 \newpage
 
 
@@ -257,6 +323,7 @@ L'algorithme proposé le GNG-A comme adaptive, l'adaptabilité signifie que l'in
 \subsection{Learning from Time-Changing Data with Adaptive Windowing}
 \subsubsection{A Bifet, R Gavalda , 2007}
 
+
 \paragraph{Mots clefs :} ADWIN
 
 \paragraph{Résumé :} Un algorithme de sélection de fenêtre d’apprentissage est présenté. L’algorithme conserve les n plus récentes observations dans une fenêtre $W$ de taille $n$ avant de la séparer en deux parties $W_1$ et $W_2$ de taille $n_1$ et $n_2$ tel que $n_1+n_2=n$. 
@@ -269,6 +336,7 @@ Tant que l'on observe pas $\left|\hat{\mu}_{W_{0}}-\hat{\mu}_{W_{1}}\right| \geq
 
 \paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Utiliser ADWIN pour séparer les données en concepts différents $C_1, C_2, ... C_i$ avec des statistiques telles que la moyenne, la variance, les quantiles... Cela permettrait, quand un nouveau concept apparaîtrait de vérifier si l'on ne dispose pas d'autres instances de ce concept dans le cas d'un concept récurrent.
 
+Implémentation : \url{https://scikit-multiflow.readthedocs.io/en/stable/api/generated/skmultiflow.drift_detection.ADWIN.html#skmultiflow.drift_detection.ADWIN}
 
 
 \section{Méthodes annexes}
@@ -278,11 +346,19 @@ Tant que l'on observe pas $\left|\hat{\mu}_{W_{0}}-\hat{\mu}_{W_{1}}\right| \geq
 
 \paragraph{Mots clefs :}Memory optimisation, online learning 
 
-\paragraph{Résumé :} Ici l'article détaille un procédé pour garder en mémoire un échantillon représentatif des données, gardant avec une probabilité forte les observations récentes et une probabilité décroissante en fonction de l'âge les données anciennes. Couplée avec d'autres outils, les auteurs constatent un gain de performance.
+\paragraph{Résumé :} L'article détaille une méthode : DTEL pour prédire en présence de dérive. La méthodologie conserve un pool de modèles (des arbres de décisions) de taille fixe. On suppose les données arrivant par batch $D$. 
+A l'arrivé d'un batch labélisé à l'instant t: 
+\begin{itemize}
+	\item Un nouveau modèle est entrainé sur les données du batch $D_t$
+	\item Les anciens modèles sont actualisés de la façon suivante. Pour chacun des anciens modèles, les données du nouveau batch sont répartis dans les feuilles de l'arbre et les probabilités des feuilles sont actualisés en conséquence. Les feuilles n'ayant pas atteint un critère de stop continuent d'être séparées avec les nouvelles données jusqu'à ce que le critère de stop prenne effet. Cela permet de garder la structure de l'arbre entraîné sur des données antérieures tout en prenant en compte le batch $D_t$.
+	\item  On ajoute le nouveau modèle au pool, et si la taille du pool excède un la taille maximum, on retire le modèle apportant le moins d'originalité selon la mesure : $\operatorname{div}(S)=1-\frac{1}{\sum_{1 \leq i \neq j \leq m} 1} \sum_{1 \leq i \neq j \leq m} Q\left(f_{i}, f_{j}\right)$ où $Q\left(f_{i}, f_{j}\right)=\frac{N^{11} N^{00}-N^{01} N^{10}}{N^{11} N^{00}+N^{01} N^{10}}$ tel que $N^{ab}$ soit le nombre d'exemple tel que le modèle $f_i$ prédise $a$ et que le modèle $f_j$ prédise $b$. Ici 1 représente une classification correcte, et 0 une erreur.
+\end{itemize}
 
-\paragraph{À quelle(s) problématique(s) l'article répond ?} Réduction de la mémoire, implémentation élégante avec probabilité de garder les exemples récents fortes.
+Les  modifications avec les données du nouveau batch sur les anciens modèles sont temporaires et les modèles retrouvent leurs état d'origine avec l'arrivé d'un nouveau batch labélisé. Le poids qu'a chacun des modèles dans la prédiction finale est calculé en fonction des performances de ceux-ci sur le batch $D_t$
 
-\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Pour moi, il y a un petit problème d'implémentation car l'algorithme est très coûteux en terme de RAM pour des gains de performance faibles.
+\paragraph{À quelle(s) problématique(s) l'article répond ?} 
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} 
 
 
 
