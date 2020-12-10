@@ -3,6 +3,7 @@
  \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage{subfig}
 \usepackage{caption}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -17,7 +18,8 @@
 \lstset{language=R,
 basicstyle=\fontfamily{pcr}\selectfont\footnotesize\color{black},
 frame = single}
-\title{Regression Quantile}
+\graphicspath{ {./figures/} }
+
 
 \date{2018}
 
@@ -25,13 +27,86 @@ frame = single}
 
 \tableofcontents
 
+\chapter*{Définition de la dérive conceptuelle}
+
+On peut définir plusieurs type de dérives avec la formule de bayes.
+$$
+P(y \mid X)=\frac{ P(y)P(X\mid y)}{P(X)}
+$$
+ 
+ On voit avec la figure 1, les différents tyoes de dérives. La dérive (a) vient d'un changement de $P(y)$, (b) est causé par un changement de $P(X\mid y)$ et (c) par $P(y \mid X)$. Les dérives illustrées par (b) et (c) sont celles qui portent atteinte le plus au modèle.
+
+\begin{figure}[h]
+\caption{Différents types de dérive}
+\centering
+\includegraphics[width=0.6\textwidth]{different_types_of_drift}
+\end{figure}
+
+La dérive de type (a) peut être modeste dans la baisse de performance. Mais quand le modèle ne peut pas trouver une frontière sans faire du sur apprentissage, où dans certaines zone où la frontière laisse une zone d'incertitude, alors cette type de dérive peut être problématique.
+
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.7\linewidth]{P_x_before.png}
+  \captionof{figure}{Concept à l'instant $t$}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.7\linewidth]{P_x_later.png}
+  \captionof{figure}{Concept à l'instant $t+\Delta t$}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+
+\newpage
+
+Les articles de recherche peuvent être séparés en deux catégories. Ceux qui ce focalisent sur la création d'un algorithme, ou d'un shéma d'apprentissage robuste a la dérive. Et ceux qui développent des méthodes faites pour détecter la dérive, sans se préocupper du modèle.
+
+
+\section*{Évaluation des méthodes}
+
+Il existe plusieurs forme d'évaluation des méthodologies. 
+\begin{itemize}
+\item Dans le cas de développement d'un nouvel algorithme, on peut comparer la qualité de ses prédiction sur un certains nombre de jeux de données (de synthèse où réel) détaillés dans un autre document.
+\item Dans le cas d'une méthode de détection de dérive, on peut regarder le nombre d'observations nécessaires avant la détection de celle-ci.
+\end{itemize}
+
 \chapter{On peut répartir les différentes méthodologies en plusieurs catégories.}
 \section{Méthodes utilisant un test statistique}
 
+\subsection{Learning from Time-Changing Data with Adaptive Windowing}
+\subsubsection{A Bifet, R Gavalda , 2007}
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Données
+\paragraph{Quel type de détection :} Détection de dérive. Adaptable à tout modèles.
+
+\paragraph{Mots clefs} Tests Statistiques, Détection sur score de modèle.
+
+\paragraph{Mots clefs :} ADWIN
+
+\paragraph{Résumé :} Un algorithme de sélection de fenêtre d’apprentissage est présenté. L’algorithme conserve les n plus récentes observations dans une fenêtre $W$ de taille $n$ avant de la séparer en deux parties $W_1$ et $W_2$ de taille $n_1$ et $n_2$ tel que $n_1+n_2=n$. 
+
+Avec $m=\frac{1}{1 / n_{0}+1 / n_{1}} \text { (moyenne harmonique de } n_{0} \text { et } n_{1} )  $; $\delta^{\prime}=\frac{\delta}{n} \text{ et } $ $ \quad \epsilon_{c u t}=\sqrt{\frac{1}{2 m} \cdot \ln \frac{4}{\delta^{\prime}}}$. 
+
+Tant que l'on observe pas $\left|\hat{\mu}_{W_{0}}-\hat{\mu}_{W_{1}}\right| \geq \epsilon_{c u t}$ où $\hat{\mu}_{W_{0}}$ est la moyenne de la fenêtre $W_0$ et $\hat{\mu}_{W_{1}}$ celle de $W_1$, on supprime les observations les plus anciennes
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Détection d'une dérive, sélection des observations correspondant au concept le plus récent.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Utiliser ADWIN pour séparer les données en concepts différents $C_1, C_2, ... C_i$ avec des statistiques telles que la moyenne, la variance, les quantiles... Cela permettrait, quand un nouveau concept apparaîtrait de vérifier si l'on ne dispose pas d'autres instances de ce concept dans le cas d'un concept récurrent.
+
+Implémentation : \url{https://scikit-multiflow.readthedocs.io/en/stable/api/generated/skmultiflow.drift_detection.ADWIN.html#skmultiflow.drift_detection.ADWIN}
 
 
 \subsection{Concept drift detection based on Fisher’s Exact test}
 \subsubsection{Danilo Rafael de Lima Cabral, Roberto Souto Maior de Barros, 2018}
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Prédictions, classes réelles
+\paragraph{Quel type de détection :} Détection de dérive. Adaptable à tout modèles.
 
 \paragraph{Mots clefs :} Tests Statistiques, Détection sur score de modèle.
 
@@ -54,6 +129,10 @@ Les trois méthodes sont testées avec plusieurs jeux de données contre DDM, EC
 \subsection{Detecting Concept Drift Using Statistical Testing}
 \subsubsection{Kyosuke Nishida and Koichiro Yamauch, 2007}
 
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Prédictions, classes réelles.
+\paragraph{Quel type de détection :} Détection de dérive. Adaptable à tout modèles.
+
 \paragraph{Mots clefs} Tests Statistiques, Détection sur score de modèle.
 
 \paragraph{Résumé :} L'article propose une méthode de détection de dérive à partir d'un test. On suppose que l'on dispose des prédictions du modèle et de la vérité. On sépare les prédictions en 2 ensembles, les plus récentes et les anciennes, on va ensuite, à l'aide de la statistique $$T\left(r_{0}, r_{r}, n_{o}, n_{r}\right)=\frac{\left|r_{0} / n_{o}-r_{r} / n_{r}\right|-0.5 \times\left(1 / n_{o}+1 / n_{r}\right)}{\sqrt{\hat{p} \times(1-\hat{p}) \times\left(1 / n_{o}+1 / n_{r}\right)}}$$ rejeter où accepter l'hypothèse de même distribution. 
@@ -68,9 +147,13 @@ Les trois méthodes sont testées avec plusieurs jeux de données contre DDM, EC
 \subsection{Learning with Drift Detection}
 \subsubsection{João Gama, Pedro Medas, Gladys Castillo, Pedro Rodrigues, 2004}
 
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Prédictions, classes réelles.
+\paragraph{Quel type de détection :} Détection de dérive. Adaptable à tout modèles.
+
 \paragraph{Mots clefs}
 
-\paragraph{Résumé :} Le but de la méthode développée ici est d'utiliser des intervalles de confiance de la loi normale appliqué aux erreurs faites par le modèle pour détecter une dérive. L'erreur devant logiquement diminuer au fur et à mesure que le modèle dispose de données d'entraînement faisant l'hypothèse que la distribution sous-jacente est la même, quand celle-ci augmente au delà d'un certain seuil, on est en présence d'une dérive.
+\paragraph{Résumé :} Les auteurs introduisent le terme de contexte. Selon eux, au sein d'un contexte la distribution des données est stationnaire. Lors de la présence d'une dérive, celle-ci est traduite par un changement de contexte, où la distribution est stationnaires, mais plus où moins différentes que la précédente. Le but de la méthode développée ici est d'utiliser des intervalles de confiance de la loi normale appliqué aux erreurs faites par le modèle pour détecter une dérive. L'erreur devant logiquement diminuer au fur et à mesure que le modèle dispose de données d'entraînement faisant l'hypothèse que la distribution sous-jacente est la même, quand celle-ci augmente au delà d'un certain seuil, on est en présence d'une dérive.
 
 \paragraph{À quelle(s) problématique(s) l'article répond ?} L'article propose une méthodologie de détection de dérive sur les scores des modèles.
 
@@ -79,6 +162,10 @@ Les trois méthodes sont testées avec plusieurs jeux de données contre DDM, EC
 
 \subsection{Concept drift detection and adaptation with Hierarchical Hypothesis Testing}
 \subsubsection{Shujian Yu, Zubin Abraham, Heng Wang; 2019}
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Prédictions, classes réelles.
+\paragraph{Quel type de détection :} Détection de dérive. Adaptable à tout modèles.
 
 \paragraph{Mots clefs} Statistical Tests, Hierarchical, Adaptive Training
 
@@ -121,7 +208,11 @@ Si une détection est relevée, alors un deuxième test est fait en comparant le
 \subsection{Tracking recurring contexts using ensemble classifiers: an application to email filtering}
 \subsubsection{Ioannis Katakis, Grigorios Tsoumakas, Ioannis Vlahavas, 2009}
 
-\paragraph{Mots clefs}
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Exemples non labélisés
+\paragraph{Quel type de détection :} Catégorisation de concept. Adaptable à tout modèles.
+
+\paragraph{Mots clefs} Dérive récurrente
 
 \paragraph{Résumé :} On suppose que les données arrivent par séries où packets, on va les projeter les données dans un espace, puis, un algorithme non supervisé va les grouper par concepts, l'espace de projection permettant de comparer les instances avec la distance euclidienne. Chaque concept différent dispose de son modèle prédictif. Quand une nouvelle série d'observations arrive, elle est projeté dans l'espace, si elle ne correspond à aucun concept, on en créé un nouveau, sinon, on score.
 
@@ -136,10 +227,15 @@ $P_{i, j}^{v}=P\left(f_{i}=v \mid c_{j}\right), i \in[1, n], j \in[1, m], v \in 
 \paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} L'article fait l'hypothèse que des données d'un même batch appartiennent aux mêmes concepts.
 
 
+
 \subsection{Learning classification rules for telecom  customer call data under concept drift}
 \subsubsection{Black, M., Hickey, R, 2003}
 
-\paragraph{Mots clefs :}
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Classes réelles.
+\paragraph{Quel type de détection :} Détection de dérive, nouvel algorithme à partir d'arbre de décision.
+
+\paragraph{Mots clefs :} Arbre de décision, 
 
 \paragraph{Résumé :} L'article développe plusieurs versions d'une méthodologie basée sur les arbres de décisions.  On suppose que les données arrivent par batchs. Un attribut de temporalité est introduit dans le jeu de données. Un arbre de décision est fait sur le dataset. Si l’attribut de temps est présent dans les décisions, alors on a un drift. Cela permet également de voir quelles variables ont été impactées par le drift. Seul les règle émanant des branches qui se trouvent dans la branche de l’arbre de décision où un attribut temporel est présent sont supprimées. Les règles qui n’ont pas été impactées restent.
 
@@ -152,7 +248,11 @@ $P_{i, j}^{v}=P\left(f_{i}=v \mid c_{j}\right), i \in[1, n], j \in[1, m], v \in 
 \subsection{An Ensemble Approach for Incremental Learning in Nonstationary Environments}
 \subsubsection{Michael D. Muhlbaier and Robi Polikar, 2007}
 
-\paragraph{Mots clefs :} 
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Données passées
+\paragraph{Quel type de détection :} Détection de dérive, nouvel algorithme d'apprentissage en ligne.
+
+\paragraph{Mots clefs :} Online learning
 
 \paragraph{Résumé :} L'article propose Learn$^{++}$.NSE NSE comme Non Stationnary Environment. On suppose que les données arrivent en par paquets, ou en batch. On suppose ici que les dernières données labélisées correspondent au concept le plus récent. Ainsi, à chaque fois qu'un batch de données labélisées arrive, on entraîne un nouveau modèle. On va ensuite regarder les taux d'erreurs respectifs de chaque ancien modèle sur l'ensemble des paquets de données. 
 
@@ -172,6 +272,9 @@ Le résultat de cette pondération va déterminer le poid de chacun des modèles
 \subsubsection{VMA Souza, DF Silva, J Gama, GE Batista , 2015}
 \subsubsection{Cité 62 fois, SIAM}
 
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Données d'initialisation.
+\paragraph{Quel type de détection :} Détection de dérive, nouvel algorithme d'apprentissage en ligne.
 \paragraph{Mots clefs :} Semi-supervisé
 
 \paragraph{Résumé :} On dispose des labels seulement lors de l'initialisation et c'est un contexte où une dérive est présente.
@@ -193,6 +296,11 @@ On peut ainsi recommencer l'itération dès l'arrivé de nouveau exemples. On os
 \subsubsection{Z Yang, S Al-Dahidi, P Baraldi, E Zio, 2019}
 
 \subsubsection{Cité 4 fois, ieeexplore.ieee.org}
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Données labélisées.
+\paragraph{Quel type de détection :} Détection de dérive, méthodologie adaptable à plusieurs algorithmes.
+\paragraph{Mots clefs :} Semi-supervisé
 
 \paragraph{Mots clefs :} Détection par analyse du modèle
 
@@ -216,6 +324,10 @@ Si cette différence est supérieure à un seuil, dont la méthodologie de déte
 
 \subsubsection{Cité N fois, Revue}
 
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$ Imbalanced Dataset
+\paragraph{Quelles informations utilisées dans la détection :} Données labélisées.
+\paragraph{Quel type de détection :} Détection de dérive dans un  contexte contrebalancé.
+
 \paragraph{Mots clefs :} Imbalanced Problems
 
 \paragraph{Résumé :} L'article propose une solution d'apprentissage automatique sur un problème contrebalancé en présence d'une dérive conceptuelle. Le traitement des données contrebalancées ce fait par la technique SMOTE, qui permet une création de points sythétiques de la classe minoritaire. La détection de la dérive se fait par une surveillance des performances du modèle par des seuils, on a affaire a une détection par seuil statistique de 4 métriques dérivés des prédictions du modèle et de la vérité.
@@ -233,6 +345,10 @@ Si cette différence est supérieure à un seuil, dont la méthodologie de déte
 \subsubsection{Yu Sun, Ke Tang, Zexuan Zhu, Xin Yao, 2018}
 
 \subsubsection{Cité 49 fois, IEEE Explore}
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Données labélisées.
+\paragraph{Quel type de détection :} Nouvel algorithme
 
 \paragraph{Mots clefs :} 
 
@@ -257,6 +373,10 @@ Les  modifications avec les données du nouveau batch sur les anciens modèles s
 \subsubsection{Peng Zhao, Le-Wen Cai, Zhi-Hua Zhou, 2019}
 
 \subsubsection{Cité 6 fois, Springer}
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Données labélisées.
+\paragraph{Quel type de détection :} Nouvel Algorithme.
 
 \paragraph{Mots clefs :} Ensemble model
 
@@ -284,9 +404,14 @@ Si le nombre de modèle est superieur de 1 à la taille du pool, on supprime le 
 
 \subsubsection{Cité N fois, }
 
-\paragraph{Mots clefs :} Ensemble model,
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Données labélisées.
+\paragraph{Quel type de détection :} Nouvelle méthodologie d'apprentissage.
 
-\paragraph{Résumé :} Les auteurs proposent dans leurs approche, d'utiliser un pool de modèle, les modèles ici sont des arbres de décision, mais tous les algorithmes pouvant être réentrainés en ligne peuvent être choisi. Avec l'arrivée d'un nouveau batch, un nouveau modèle est entraîné. Les poids que prennent chaque algorithme du pool est calculé en fonction des performances obtenues sur le dernier batch. 
+
+\paragraph{Mots clefs :} Ensemble model
+
+\paragraph{Résumé :} Les auteurs proposent dans leurs approche, d'utiliser un pool de modèle, les modèles ici sont des arbres de décisions, mais tous les algorithmes pouvant être réentrainés en ligne peuvent être choisi. Avec l'arrivée d'un nouveau batch, un nouveau modèle est entraîné. Les poids que prennent chaque algorithme du pool est calculé en fonction des performances obtenues sur le dernier batch. 
 
 Les anciens modèles sont actualisés en prenant en compte le nouveau batch. Si la taille en mémoire des modèles dépasse un seuil, alors les modèles sont élagués.
 
@@ -320,23 +445,6 @@ L'algorithme proposé le GNG-A comme adaptive, l'adaptabilité signifie que l'in
 
 
 
-\subsection{Learning from Time-Changing Data with Adaptive Windowing}
-\subsubsection{A Bifet, R Gavalda , 2007}
-
-
-\paragraph{Mots clefs :} ADWIN
-
-\paragraph{Résumé :} Un algorithme de sélection de fenêtre d’apprentissage est présenté. L’algorithme conserve les n plus récentes observations dans une fenêtre $W$ de taille $n$ avant de la séparer en deux parties $W_1$ et $W_2$ de taille $n_1$ et $n_2$ tel que $n_1+n_2=n$. 
-
-Avec $m=\frac{1}{1 / n_{0}+1 / n_{1}} \text { (moyenne harmonique de } n_{0} \text { et } n_{1} )  $; $\delta^{\prime}=\frac{\delta}{n} \text{ et } $ $ \quad \epsilon_{c u t}=\sqrt{\frac{1}{2 m} \cdot \ln \frac{4}{\delta^{\prime}}}$. 
-
-Tant que l'on observe pas $\left|\hat{\mu}_{W_{0}}-\hat{\mu}_{W_{1}}\right| \geq \epsilon_{c u t}$ où $\hat{\mu}_{W_{0}}$ est la moyenne de la fenêtre $W_0$ et $\hat{\mu}_{W_{1}}$ celle de $W_1$, on supprime les observations les plus anciennes
-
-\paragraph{À quelle(s) problématique(s) l'article répond ?} Détection d'une dérive, sélection des observations correspondant au concept le plus récent.
-
-\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} Utiliser ADWIN pour séparer les données en concepts différents $C_1, C_2, ... C_i$ avec des statistiques telles que la moyenne, la variance, les quantiles... Cela permettrait, quand un nouveau concept apparaîtrait de vérifier si l'on ne dispose pas d'autres instances de ce concept dans le cas d'un concept récurrent.
-
-Implémentation : \url{https://scikit-multiflow.readthedocs.io/en/stable/api/generated/skmultiflow.drift_detection.ADWIN.html#skmultiflow.drift_detection.ADWIN}
 
 
 \section{Méthodes annexes}

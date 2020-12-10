@@ -1,22 +1,22 @@
 \BOOKMARK [0][-]{chapter.1}{On peut r\351partir les diff\351rentes m\351thodologies en plusieurs cat\351gories.}{}% 1
 \BOOKMARK [1][-]{section.1.1}{M\351thodes utilisant un test statistique}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Concept drift detection based on Fisher\220s Exact test}{section.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.2}{Detecting Concept Drift Using Statistical Testing}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.3}{Learning with Drift Detection}{section.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.4}{Concept drift detection and adaptation with Hierarchical Hypothesis Testing}{section.1.1}% 6
-\BOOKMARK [2][-]{subsection.1.1.5}{Handling adversarial concept drift in streaming data}{section.1.1}% 7
-\BOOKMARK [1][-]{section.1.2}{M\351thodes \340 base de mod\350les}{chapter.1}% 8
-\BOOKMARK [2][-]{subsection.1.2.1}{Tracking recurring contexts using ensemble classifiers: an application to email filtering}{section.1.2}% 9
-\BOOKMARK [2][-]{subsection.1.2.2}{Learning classification rules for telecom customer call data under concept drift}{section.1.2}% 10
-\BOOKMARK [2][-]{subsection.1.2.3}{An Ensemble Approach for Incremental Learning in Nonstationary Environments}{section.1.2}% 11
-\BOOKMARK [2][-]{subsection.1.2.4}{Data Stream Classification Guided by Clustering on Non Stationary Environments and Extreme Verification Latency}{section.1.2}% 12
-\BOOKMARK [2][-]{subsection.1.2.5}{A Novel Concept Drift Detection Method for Incremental Learning in Nonstationary Environmnents}{section.1.2}% 13
-\BOOKMARK [2][-]{subsection.1.2.6}{Concept Drift detection and adaptation in Big Imbalance industrial IoT data using ensemble learning method of offline classifiers}{section.1.2}% 14
-\BOOKMARK [2][-]{subsection.1.2.7}{Concept Drift Adaptation by exploiting historical knowledge}{section.1.2}% 15
-\BOOKMARK [2][-]{subsection.1.2.8}{Handling concept drift via model reuse}{section.1.2}% 16
-\BOOKMARK [2][-]{subsection.1.2.9}{Reacting to Different Types of Concept Drift: The Accuracy Updated Ensemble Algorithm}{section.1.2}% 17
-\BOOKMARK [1][-]{section.1.3}{M\351thodes de d\351t\351ction non supervis\351es}{chapter.1}% 18
-\BOOKMARK [2][-]{subsection.1.3.1}{An adaptive algorithm for anomaly and novelty detection in evolving data streams}{section.1.3}% 19
-\BOOKMARK [2][-]{subsection.1.3.2}{Learning from Time-Changing Data with Adaptive Windowing}{section.1.3}% 20
+\BOOKMARK [2][-]{subsection.1.1.1}{Learning from Time-Changing Data with Adaptive Windowing}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Concept drift detection based on Fisher\220s Exact test}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{Detecting Concept Drift Using Statistical Testing}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.4}{Learning with Drift Detection}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.5}{Concept drift detection and adaptation with Hierarchical Hypothesis Testing}{section.1.1}% 7
+\BOOKMARK [2][-]{subsection.1.1.6}{Handling adversarial concept drift in streaming data}{section.1.1}% 8
+\BOOKMARK [1][-]{section.1.2}{M\351thodes \340 base de mod\350les}{chapter.1}% 9
+\BOOKMARK [2][-]{subsection.1.2.1}{Tracking recurring contexts using ensemble classifiers: an application to email filtering}{section.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.2.2}{Learning classification rules for telecom customer call data under concept drift}{section.1.2}% 11
+\BOOKMARK [2][-]{subsection.1.2.3}{An Ensemble Approach for Incremental Learning in Nonstationary Environments}{section.1.2}% 12
+\BOOKMARK [2][-]{subsection.1.2.4}{Data Stream Classification Guided by Clustering on Non Stationary Environments and Extreme Verification Latency}{section.1.2}% 13
+\BOOKMARK [2][-]{subsection.1.2.5}{A Novel Concept Drift Detection Method for Incremental Learning in Nonstationary Environmnents}{section.1.2}% 14
+\BOOKMARK [2][-]{subsection.1.2.6}{Concept Drift detection and adaptation in Big Imbalance industrial IoT data using ensemble learning method of offline classifiers}{section.1.2}% 15
+\BOOKMARK [2][-]{subsection.1.2.7}{Concept Drift Adaptation by exploiting historical knowledge}{section.1.2}% 16
+\BOOKMARK [2][-]{subsection.1.2.8}{Handling concept drift via model reuse}{section.1.2}% 17
+\BOOKMARK [2][-]{subsection.1.2.9}{Reacting to Different Types of Concept Drift: The Accuracy Updated Ensemble Algorithm}{section.1.2}% 18
+\BOOKMARK [1][-]{section.1.3}{M\351thodes de d\351t\351ction non supervis\351es}{chapter.1}% 19
+\BOOKMARK [2][-]{subsection.1.3.1}{An adaptive algorithm for anomaly and novelty detection in evolving data streams}{section.1.3}% 20
 \BOOKMARK [1][-]{section.1.4}{M\351thodes annexes}{chapter.1}% 21
 \BOOKMARK [2][-]{subsection.1.4.1}{Efficient Data Stream Classification via Probabilistic Adaptive Windows}{section.1.4}% 22
