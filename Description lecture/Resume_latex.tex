@@ -229,6 +229,82 @@ Un première méthode utilise la moyenne comme critère de détéction, la deuxi
 
 
 
+
+
+
+
+\subsection{Wilcoxon Rank Sum Test Drift Detector}
+\subsubsection{Roberto Souto Maior de Barro; 2017}
+
+\paragraph{Type de Dérive :} $P(y\mid X)$
+\paragraph{Quelles informations utilisées dans la détection :} Prédictions
+\paragraph{Quel type de détection :} Détection de dérive. Adaptable à tout modèles.
+
+\paragraph{Mots clefs} Statistical Tests
+
+\paragraph{Résumé :} Pour détecter un dérive au sein des données les auteurs vont effectuer un test de Wilcoxon sur les résultats deux fenêtres, une ancienne et une récente.
+Contrairement à STEPD, la taille de l'ancienne fenêtre est limité.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Les techniques développées permettent une détection rapide de la dérive. 
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
+
+
+
+
+
+
+
+
+\subsection{Efficient Handling of Concept Drift and ConceptEvolution over Stream Data}
+\subsubsection{Roberto Souto Maior de Barro; 2017}
+
+\paragraph{Type de Dérive :} $P(y\mid X)$,  Nouvelles classes
+\paragraph{Quelles informations utilisées dans la détection :} 
+\paragraph{Quel type de détection :} Détection de dérive. Adaptable à tout modèles à base de cluster.
+
+\paragraph{Mots clefs} Statistical Tests
+
+\paragraph{Résumé :} 
+L'algorithme maintient à jour un ensemble de modèle de classification de type k plus proches voisins. 
+À l'arrivé d'un nouvel exemple, celui-ci est prédit, mais, si il se trouve trop loin des clusters existant, alors, il est considéré comme un outlier et est stocké dans un buffer. Quand il y a assez d'exemples dans le buffer, on calcule une métrique pour chaque couple (exemple, modèle de l'ensemble). Si des exemple ne peuvent pas être rattaché à des clusters, alors on a emergence d'une nouvelle classe et ceux ci sont incorporé à un nouveau modèle. 
+
+Dès qu'une nouvelle instance doit est prédite, un score de confiance en la prediction est également calculé et stocké. S'il y a une détection de changement de distribution dans la série de valeurs de confiance des prédiction alors on à une dérive. La taille de la fenêtre est ajusté, certains exemples sont selectionné basé sur leur score de confiance et leurs labels sont récupérés (Comment ? Pas pratique) et un modèle est entrainé avec ceux-ci et remplace le plus vieux modèle de l'ensemble..
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} L'emergence de nouvelle classe.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
+
+
+
+
+
+\subsection{RCD: A Recurring Concept Drift Framework}
+\subsubsection{Gonc, Campo-Avila; 2013}
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(X)$
+\paragraph{Quelles informations utilisées dans la détection :} Prédictions, classes réelles.
+\paragraph{Quel type de détection :} Détection de dérive. Adaptable à tout modèles.
+
+\paragraph{Mots clefs} Statistical Tests, Hierarchical, Adaptive Training
+
+\paragraph{Résumé :} Pour détecter un dérive au sein des données d'entraînement, les auteurs mettent en place deux méthodologie basé sur l'inéglité de Hoeffding.
+
+Un première méthode utilise la moyenne comme critère de détéction, la deuxième une moyenne pondérées.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Les techniques développées permettent une détection rapide de la dérive. 
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
+
+
+
+
+
+
+
+
+
+
 \subsection{Handling adversarial concept drift in streaming data}
 \subsubsection{Tegjyot Singh Sethi , Mehmed Kantardzic, 2017}
 
