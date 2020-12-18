@@ -34,7 +34,7 @@ $$
 P(y \mid X)=\frac{ P(y)P(X\mid y)}{P(X)}
 $$
  
- On voit avec la figure 1, les différents tyoes de dérives. La dérive (a) vient d'un changement de $P(y)$, (b) est causé par un changement de $P(X\mid y)$ et (c) par $P(y \mid X)$. Les dérives illustrées par (b) et (c) sont celles qui portent atteinte le plus au modèle.
+ On voit avec la figure 1, différents types de dérives. La dérive (a) vient d'un changement de $P(y)$, (b) est causé par un changement de $P(X\mid y)$ et (c) par $P(y \mid X)$. Les dérives illustrées par (b) et (c) sont celles qui portent atteinte le plus au modèle. On peut aussi avoir d'autres dérives détaillé dans les exemples.
 
 \begin{figure}[h]
 \caption{Différents types de dérive}
@@ -43,6 +43,14 @@ $$
 \end{figure}
 
 La dérive de type (a) peut être modeste dans la baisse de performance. Mais quand le modèle ne peut pas trouver une frontière sans faire du sur apprentissage, où dans certaines zone où la frontière laisse une zone d'incertitude, alors cette type de dérive peut être problématique.
+
+Exemples:
+\begin{list}{•}
+\item[Changement de $P(y)$] Si on cherche à prédire les transactions frauduleuses, et petit à petit, leurs proportions augmentent, il y a de plus en plus de fraudes sans que leurs définitions changent.
+\item[Changement de $P(X\mid y)$] Toujours dans le cas de la détections des fraudes, un nouveau type de fraude est mis en œuvre, de nouveaux types de transaction apparaissent, ce sont des fraudes.
+\item[Changement de $P(y \mid X)$] Un nouveaux dispositif de sécurité est mis en place, seulement certains sites web sont autorisés pour les transactions, des transactions qui était normales sont maintenant des fraudes.
+\item[Changement du vecteur $X$] 
+\end{list}
 
 
 \begin{figure}
@@ -60,6 +68,7 @@ La dérive de type (a) peut être modeste dans la baisse de performance. Mais qu
   \label{fig:test2}
 \end{minipage}
 \end{figure}
+
 
 \newpage
 
@@ -242,7 +251,7 @@ Un première méthode utilise la moyenne comme critère de détéction, la deuxi
 
 \paragraph{Mots clefs} Statistical Tests
 
-\paragraph{Résumé :} Pour détecter un dérive au sein des données les auteurs vont effectuer un test de Wilcoxon sur les résultats deux fenêtres, une ancienne et une récente.
+\paragraph{Résumé :} Pour détecter un dérive au sein des données les auteurs vont effectuer un test de Wilcoxon sur les prédictions du modèle deux fenêtres, une ancienne et une récente.
 Contrairement à STEPD, la taille de l'ancienne fenêtre est limité.
 
 \paragraph{À quelle(s) problématique(s) l'article répond ?} Les techniques développées permettent une détection rapide de la dérive. 
@@ -296,6 +305,48 @@ Un première méthode utilise la moyenne comme critère de détéction, la deuxi
 
 \paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
 
+
+
+
+
+
+
+\subsection{Active learning approach to concept drift problem}
+\subsubsection{BARTOSZ; 2010}
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(X)$
+\paragraph{Quelles informations utilisées dans la détection :} ancien labels, vecteur X
+\paragraph{Quel type de détection :} Quand récupérer des labels. Adaptable à tout modèles.
+
+\paragraph{Mots clefs :} Semi-supervisé
+
+\paragraph{Résumé :} Ici les auteurs proposent un algorithme permettant de décider quand il est nécessaire de demander les classes réelles des instances pour un réentrainement basé sur des mesures de distance.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Drift dans un contexte semi-supervisé.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
+
+
+
+
+
+
+
+
+\subsection{Concept Drift Detection: Dealing with Missing Values via Fuzzy Distance Estimations}
+\subsubsection{Liu, Lu; 2020}
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(X)$
+\paragraph{Quelles informations utilisées dans la détection :} vecteur X
+\paragraph{Quel type de détection :} Surtout pour avoir une imputation de valeur manquante non gênante dans la détection de dérive.
+
+\paragraph{Mots clefs :} 
+
+\paragraph{Résumé :} Ici les auteurs proposent un algorithme un algorithme permettant l'imputation de valeurs manquantes. Cette imputation se fait de façon à garder la variance des données. En effet, on imagine que remplacer les valeurs manquantes par la moyenne en présence de dérive, ne marche pas bien avec ADWIN par exemple.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Valeurs manquantes
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
 
 
 

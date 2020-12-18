@@ -83,111 +83,129 @@
 \contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{8}{section*.76}
 \contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{8}{section*.77}
 \contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{8}{section*.78}
-\contentsline {subsection}{\numberline {1.1.10}Handling adversarial concept drift in streaming data}{8}{subsection.1.1.10}
-\contentsline {subsubsection}{Tegjyot Singh Sethi , Mehmed Kantardzic, 2017}{8}{section*.79}
-\contentsline {paragraph}{Mots clefs}{8}{section*.80}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{9}{section*.81}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{9}{section*.82}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{9}{section*.83}
+\contentsline {subsection}{\numberline {1.1.10}Active learning approach to concept drift problem}{8}{subsection.1.1.10}
+\contentsline {subsubsection}{BARTOSZ; 2010}{8}{section*.79}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{8}{section*.80}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{9}{section*.81}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{9}{section*.82}
+\contentsline {paragraph}{Mots clefs :}{9}{section*.83}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{9}{section*.84}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{9}{section*.85}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{9}{section*.86}
+\contentsline {subsection}{\numberline {1.1.11}Concept Drift Detection: Dealing with Missing Values via Fuzzy Distance Estimations}{9}{subsection.1.1.11}
+\contentsline {subsubsection}{Liu, Lu; 2020}{9}{section*.87}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{9}{section*.88}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{9}{section*.89}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{9}{section*.90}
+\contentsline {paragraph}{Mots clefs :}{9}{section*.91}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{9}{section*.92}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{9}{section*.93}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{9}{section*.94}
+\contentsline {subsection}{\numberline {1.1.12}Handling adversarial concept drift in streaming data}{9}{subsection.1.1.12}
+\contentsline {subsubsection}{Tegjyot Singh Sethi , Mehmed Kantardzic, 2017}{9}{section*.95}
+\contentsline {paragraph}{Mots clefs}{9}{section*.96}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{9}{section*.97}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{9}{section*.98}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{9}{section*.99}
 \contentsline {section}{\numberline {1.2}M\IeC {\'e}thodes \IeC {\`a} base de mod\IeC {\`e}les}{10}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Tracking recurring contexts using ensemble classifiers: an application to email filtering}{10}{subsection.1.2.1}
-\contentsline {subsubsection}{Ioannis Katakis, Grigorios Tsoumakas, Ioannis Vlahavas, 2009}{10}{section*.84}
-\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{10}{section*.85}
-\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{10}{section*.86}
-\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{10}{section*.87}
-\contentsline {paragraph}{Mots clefs}{10}{section*.88}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{10}{section*.89}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{10}{section*.90}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{10}{section*.91}
+\contentsline {subsubsection}{Ioannis Katakis, Grigorios Tsoumakas, Ioannis Vlahavas, 2009}{10}{section*.100}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{10}{section*.101}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{10}{section*.102}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{10}{section*.103}
+\contentsline {paragraph}{Mots clefs}{10}{section*.104}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{10}{section*.105}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{10}{section*.106}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{10}{section*.107}
 \contentsline {subsection}{\numberline {1.2.2}Learning classification rules for telecom customer call data under concept drift}{10}{subsection.1.2.2}
-\contentsline {subsubsection}{Black, M., Hickey, R, 2003}{10}{section*.92}
-\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{10}{section*.93}
-\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{10}{section*.94}
-\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{10}{section*.95}
-\contentsline {paragraph}{Mots clefs :}{10}{section*.96}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{10}{section*.97}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{10}{section*.98}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{11}{section*.99}
+\contentsline {subsubsection}{Black, M., Hickey, R, 2003}{10}{section*.108}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{10}{section*.109}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{10}{section*.110}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{10}{section*.111}
+\contentsline {paragraph}{Mots clefs :}{10}{section*.112}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{10}{section*.113}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{10}{section*.114}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{11}{section*.115}
 \contentsline {subsection}{\numberline {1.2.3}An Ensemble Approach for Incremental Learning in Nonstationary Environments}{11}{subsection.1.2.3}
-\contentsline {subsubsection}{Michael D. Muhlbaier and Robi Polikar, 2007}{11}{section*.100}
-\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{11}{section*.101}
-\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{11}{section*.102}
-\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{11}{section*.103}
-\contentsline {paragraph}{Mots clefs :}{11}{section*.104}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{11}{section*.105}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{11}{section*.106}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{11}{section*.107}
+\contentsline {subsubsection}{Michael D. Muhlbaier and Robi Polikar, 2007}{11}{section*.116}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{11}{section*.117}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{11}{section*.118}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{11}{section*.119}
+\contentsline {paragraph}{Mots clefs :}{11}{section*.120}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{11}{section*.121}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{11}{section*.122}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{11}{section*.123}
 \contentsline {subsection}{\numberline {1.2.4}Data Stream Classification Guided by Clustering on Non Stationary Environments and Extreme Verification Latency}{11}{subsection.1.2.4}
-\contentsline {subsubsection}{VMA Souza, DF Silva, J Gama, GE Batista , 2015}{11}{section*.108}
-\contentsline {subsubsection}{Cit\IeC {\'e} 62 fois, SIAM}{11}{section*.109}
-\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{11}{section*.110}
-\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{11}{section*.111}
-\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{11}{section*.112}
-\contentsline {paragraph}{Mots clefs :}{11}{section*.113}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{12}{section*.114}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{12}{section*.115}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{12}{section*.116}
+\contentsline {subsubsection}{VMA Souza, DF Silva, J Gama, GE Batista , 2015}{11}{section*.124}
+\contentsline {subsubsection}{Cit\IeC {\'e} 62 fois, SIAM}{11}{section*.125}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{11}{section*.126}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{11}{section*.127}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{11}{section*.128}
+\contentsline {paragraph}{Mots clefs :}{11}{section*.129}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{12}{section*.130}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{12}{section*.131}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{12}{section*.132}
 \contentsline {subsection}{\numberline {1.2.5}A Novel Concept Drift Detection Method for Incremental Learning in Nonstationary Environmnents}{12}{subsection.1.2.5}
-\contentsline {subsubsection}{Z Yang, S Al-Dahidi, P Baraldi, E Zio, 2019}{12}{section*.117}
-\contentsline {subsubsection}{Cit\IeC {\'e} 4 fois, ieeexplore.ieee.org}{12}{section*.118}
-\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{12}{section*.119}
-\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{12}{section*.120}
-\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{12}{section*.121}
-\contentsline {paragraph}{Mots clefs :}{12}{section*.122}
-\contentsline {paragraph}{Mots clefs :}{12}{section*.123}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{12}{section*.124}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{13}{section*.125}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{13}{section*.126}
+\contentsline {subsubsection}{Z Yang, S Al-Dahidi, P Baraldi, E Zio, 2019}{12}{section*.133}
+\contentsline {subsubsection}{Cit\IeC {\'e} 4 fois, ieeexplore.ieee.org}{12}{section*.134}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{12}{section*.135}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{12}{section*.136}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{12}{section*.137}
+\contentsline {paragraph}{Mots clefs :}{12}{section*.138}
+\contentsline {paragraph}{Mots clefs :}{12}{section*.139}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{12}{section*.140}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{13}{section*.141}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{13}{section*.142}
 \contentsline {subsection}{\numberline {1.2.6}Concept Drift detection and adaptation in Big Imbalance industrial IoT data using ensemble learning method of offline classifiers}{13}{subsection.1.2.6}
-\contentsline {subsubsection}{Chun-Cheng Lin, Der-Jiunn Deng, 2019}{13}{section*.127}
-\contentsline {subsubsection}{Cit\IeC {\'e} N fois, Revue}{13}{section*.128}
-\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{13}{section*.129}
-\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{13}{section*.130}
-\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{13}{section*.131}
-\contentsline {paragraph}{Mots clefs :}{13}{section*.132}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{13}{section*.133}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{13}{section*.134}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{13}{section*.135}
+\contentsline {subsubsection}{Chun-Cheng Lin, Der-Jiunn Deng, 2019}{13}{section*.143}
+\contentsline {subsubsection}{Cit\IeC {\'e} N fois, Revue}{13}{section*.144}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{13}{section*.145}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{13}{section*.146}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{13}{section*.147}
+\contentsline {paragraph}{Mots clefs :}{13}{section*.148}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{13}{section*.149}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{13}{section*.150}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{13}{section*.151}
 \contentsline {subsection}{\numberline {1.2.7}Concept Drift Adaptation by exploiting historical knowledge}{13}{subsection.1.2.7}
-\contentsline {subsubsection}{Yu Sun, Ke Tang, Zexuan Zhu, Xin Yao, 2018}{13}{section*.136}
-\contentsline {subsubsection}{Cit\IeC {\'e} 49 fois, IEEE Explore}{13}{section*.137}
-\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{13}{section*.138}
-\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{13}{section*.139}
-\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{13}{section*.140}
-\contentsline {paragraph}{Mots clefs :}{13}{section*.141}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{14}{section*.142}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{14}{section*.143}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{14}{section*.144}
+\contentsline {subsubsection}{Yu Sun, Ke Tang, Zexuan Zhu, Xin Yao, 2018}{13}{section*.152}
+\contentsline {subsubsection}{Cit\IeC {\'e} 49 fois, IEEE Explore}{13}{section*.153}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{13}{section*.154}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{13}{section*.155}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{13}{section*.156}
+\contentsline {paragraph}{Mots clefs :}{13}{section*.157}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{14}{section*.158}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{14}{section*.159}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{14}{section*.160}
 \contentsline {subsection}{\numberline {1.2.8}Handling concept drift via model reuse}{14}{subsection.1.2.8}
-\contentsline {subsubsection}{Peng Zhao, Le-Wen Cai, Zhi-Hua Zhou, 2019}{14}{section*.145}
-\contentsline {subsubsection}{Cit\IeC {\'e} 6 fois, Springer}{14}{section*.146}
-\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{14}{section*.147}
-\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{14}{section*.148}
-\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{14}{section*.149}
-\contentsline {paragraph}{Mots clefs :}{14}{section*.150}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{14}{section*.151}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{14}{section*.152}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{15}{section*.153}
+\contentsline {subsubsection}{Peng Zhao, Le-Wen Cai, Zhi-Hua Zhou, 2019}{14}{section*.161}
+\contentsline {subsubsection}{Cit\IeC {\'e} 6 fois, Springer}{14}{section*.162}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{14}{section*.163}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{14}{section*.164}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{14}{section*.165}
+\contentsline {paragraph}{Mots clefs :}{14}{section*.166}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{14}{section*.167}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{14}{section*.168}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{15}{section*.169}
 \contentsline {subsection}{\numberline {1.2.9}Reacting to Different Types of Concept Drift: The Accuracy Updated Ensemble Algorithm}{15}{subsection.1.2.9}
-\contentsline {subsubsection}{Dariusz Brzezinski and Jerzy Stefanowski, 2014}{15}{section*.154}
-\contentsline {subsubsection}{Cit\IeC {\'e} N fois, }{15}{section*.155}
-\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{15}{section*.156}
-\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{15}{section*.157}
-\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{15}{section*.158}
-\contentsline {paragraph}{Mots clefs :}{15}{section*.159}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{15}{section*.160}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{15}{section*.161}
+\contentsline {subsubsection}{Dariusz Brzezinski and Jerzy Stefanowski, 2014}{15}{section*.170}
+\contentsline {subsubsection}{Cit\IeC {\'e} N fois, }{15}{section*.171}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{15}{section*.172}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{15}{section*.173}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{15}{section*.174}
+\contentsline {paragraph}{Mots clefs :}{15}{section*.175}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{15}{section*.176}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{15}{section*.177}
 \contentsline {section}{\numberline {1.3}M\IeC {\'e}thodes de d\IeC {\'e}t\IeC {\'e}ction non supervis\IeC {\'e}es}{16}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}An adaptive algorithm for anomaly and novelty detection in evolving data streams}{16}{subsection.1.3.1}
-\contentsline {subsubsection}{Mohamed-Rafik Bouguelia, Slawomir Nowaczyk, Amir H. Payberah; 2018}{16}{section*.162}
-\contentsline {paragraph}{Mots clefs :}{16}{section*.163}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{16}{section*.164}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ? }{16}{section*.165}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ? }{16}{section*.166}
+\contentsline {subsubsection}{Mohamed-Rafik Bouguelia, Slawomir Nowaczyk, Amir H. Payberah; 2018}{16}{section*.178}
+\contentsline {paragraph}{Mots clefs :}{16}{section*.179}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{16}{section*.180}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ? }{16}{section*.181}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ? }{16}{section*.182}
 \contentsline {section}{\numberline {1.4}M\IeC {\'e}thodes annexes}{17}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Efficient Data Stream Classification via Probabilistic Adaptive Windows}{17}{subsection.1.4.1}
-\contentsline {subsubsection}{Albert Bifet, Jesse Read, Bernhard Pfahringer, Geoff Holmes; 2013}{17}{section*.167}
-\contentsline {paragraph}{Mots clefs :}{17}{section*.168}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{17}{section*.169}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{17}{section*.170}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{17}{section*.171}
+\contentsline {subsubsection}{Albert Bifet, Jesse Read, Bernhard Pfahringer, Geoff Holmes; 2013}{17}{section*.183}
+\contentsline {paragraph}{Mots clefs :}{17}{section*.184}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{17}{section*.185}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{17}{section*.186}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{17}{section*.187}

@@ -9,18 +9,20 @@
 \BOOKMARK [2][-]{subsection.1.1.7}{Wilcoxon Rank Sum Test Drift Detector}{section.1.1}% 9
 \BOOKMARK [2][-]{subsection.1.1.8}{Efficient Handling of Concept Drift and ConceptEvolution over Stream Data}{section.1.1}% 10
 \BOOKMARK [2][-]{subsection.1.1.9}{RCD: A Recurring Concept Drift Framework}{section.1.1}% 11
-\BOOKMARK [2][-]{subsection.1.1.10}{Handling adversarial concept drift in streaming data}{section.1.1}% 12
-\BOOKMARK [1][-]{section.1.2}{M\351thodes \340 base de mod\350les}{chapter.1}% 13
-\BOOKMARK [2][-]{subsection.1.2.1}{Tracking recurring contexts using ensemble classifiers: an application to email filtering}{section.1.2}% 14
-\BOOKMARK [2][-]{subsection.1.2.2}{Learning classification rules for telecom customer call data under concept drift}{section.1.2}% 15
-\BOOKMARK [2][-]{subsection.1.2.3}{An Ensemble Approach for Incremental Learning in Nonstationary Environments}{section.1.2}% 16
-\BOOKMARK [2][-]{subsection.1.2.4}{Data Stream Classification Guided by Clustering on Non Stationary Environments and Extreme Verification Latency}{section.1.2}% 17
-\BOOKMARK [2][-]{subsection.1.2.5}{A Novel Concept Drift Detection Method for Incremental Learning in Nonstationary Environmnents}{section.1.2}% 18
-\BOOKMARK [2][-]{subsection.1.2.6}{Concept Drift detection and adaptation in Big Imbalance industrial IoT data using ensemble learning method of offline classifiers}{section.1.2}% 19
-\BOOKMARK [2][-]{subsection.1.2.7}{Concept Drift Adaptation by exploiting historical knowledge}{section.1.2}% 20
-\BOOKMARK [2][-]{subsection.1.2.8}{Handling concept drift via model reuse}{section.1.2}% 21
-\BOOKMARK [2][-]{subsection.1.2.9}{Reacting to Different Types of Concept Drift: The Accuracy Updated Ensemble Algorithm}{section.1.2}% 22
-\BOOKMARK [1][-]{section.1.3}{M\351thodes de d\351t\351ction non supervis\351es}{chapter.1}% 23
-\BOOKMARK [2][-]{subsection.1.3.1}{An adaptive algorithm for anomaly and novelty detection in evolving data streams}{section.1.3}% 24
-\BOOKMARK [1][-]{section.1.4}{M\351thodes annexes}{chapter.1}% 25
-\BOOKMARK [2][-]{subsection.1.4.1}{Efficient Data Stream Classification via Probabilistic Adaptive Windows}{section.1.4}% 26
+\BOOKMARK [2][-]{subsection.1.1.10}{Active learning approach to concept drift problem}{section.1.1}% 12
+\BOOKMARK [2][-]{subsection.1.1.11}{Concept Drift Detection: Dealing with Missing Values via Fuzzy Distance Estimations}{section.1.1}% 13
+\BOOKMARK [2][-]{subsection.1.1.12}{Handling adversarial concept drift in streaming data}{section.1.1}% 14
+\BOOKMARK [1][-]{section.1.2}{M\351thodes \340 base de mod\350les}{chapter.1}% 15
+\BOOKMARK [2][-]{subsection.1.2.1}{Tracking recurring contexts using ensemble classifiers: an application to email filtering}{section.1.2}% 16
+\BOOKMARK [2][-]{subsection.1.2.2}{Learning classification rules for telecom customer call data under concept drift}{section.1.2}% 17
+\BOOKMARK [2][-]{subsection.1.2.3}{An Ensemble Approach for Incremental Learning in Nonstationary Environments}{section.1.2}% 18
+\BOOKMARK [2][-]{subsection.1.2.4}{Data Stream Classification Guided by Clustering on Non Stationary Environments and Extreme Verification Latency}{section.1.2}% 19
+\BOOKMARK [2][-]{subsection.1.2.5}{A Novel Concept Drift Detection Method for Incremental Learning in Nonstationary Environmnents}{section.1.2}% 20
+\BOOKMARK [2][-]{subsection.1.2.6}{Concept Drift detection and adaptation in Big Imbalance industrial IoT data using ensemble learning method of offline classifiers}{section.1.2}% 21
+\BOOKMARK [2][-]{subsection.1.2.7}{Concept Drift Adaptation by exploiting historical knowledge}{section.1.2}% 22
+\BOOKMARK [2][-]{subsection.1.2.8}{Handling concept drift via model reuse}{section.1.2}% 23
+\BOOKMARK [2][-]{subsection.1.2.9}{Reacting to Different Types of Concept Drift: The Accuracy Updated Ensemble Algorithm}{section.1.2}% 24
+\BOOKMARK [1][-]{section.1.3}{M\351thodes de d\351t\351ction non supervis\351es}{chapter.1}% 25
+\BOOKMARK [2][-]{subsection.1.3.1}{An adaptive algorithm for anomaly and novelty detection in evolving data streams}{section.1.3}% 26
+\BOOKMARK [1][-]{section.1.4}{M\351thodes annexes}{chapter.1}% 27
+\BOOKMARK [2][-]{subsection.1.4.1}{Efficient Data Stream Classification via Probabilistic Adaptive Windows}{section.1.4}% 28
