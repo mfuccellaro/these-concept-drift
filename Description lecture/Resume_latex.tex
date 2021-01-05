@@ -637,6 +637,41 @@ Les anciens modèles sont actualisés en prenant en compte le nouveau batch. Si 
 
 
 
+\subsection{Dynamic financial distress prediction using instance selection for the disposal of concept drift}
+\subsubsection{Jie Sun, Hui Li, 2011}
+
+\subsubsection{Cité 65 fois, }
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$ Dérive virtuelle
+\paragraph{Quelles informations utilisées dans la détection :} Données labélisées.
+\paragraph{Quel type de détection :} Nouvelle méthodologie d'apprentissage.
+
+\paragraph{Résumé :} Spécialisé dans le monde de la finance les auteurs proposent une méthodologie qui est un regroupement de méthode existantes adapté à leurs cas d'usage. Des comparaisons de manières de sélectionner les anciens exemples labélisés sont présentés. On peut retenir une manière astucieuse dans le cas de la dérive conceptuelle: Entraîner un modèle sur les dernières données, puis, scorer les anciennes données avec ce nouveaux modèle et selectionner les données ou le modèle est le plus précis afin de les incorporer à celui-ci.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} L'article apporte une réponse avec à la question de quelle donnée utiliser pour un l'apprentissage du dernier concept.
+
+
+
+
+
+
+
+\subsection{Learning under concept drift using a neuro-evolutionary ensemble}
+\subsubsection{Jie Sun, Hui Li, 2013}
+
+\subsubsection{Cité 4 fois, }
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$ 
+\paragraph{Quelles informations utilisées dans la détection :} Données labélisées.
+\paragraph{Quel type de détection :} Nouvelle méthodologie d'apprentissage.
+
+\paragraph{Résumé :} Les auteurs utilisent un schéma classique de gestion de la dérive. C'est à dire qu'ils procèdent à un réapprentissage systématique. L'aspect nouveaux vient de la manière dont les modèles sont séléctionnés. On utilise un ensemble de réseaux de neuronnes. Les poids de chaque réseaux est pondéré par un sa performance prédictive. Avec l'arrivé d'un nouveau batch de donnée un nouveau modèle est instancié. Mais les poids et biais de ce réseaux sont choisi par un algorithme génétique.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} L'article ce focalise sur la qualité des prédictions. L'architecture des modèles pourrait également être séléctionné par un algorithme génétique.
+
+
+
+
 
 
 

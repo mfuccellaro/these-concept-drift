@@ -22,7 +22,9 @@
 \BOOKMARK [2][-]{subsection.1.2.7}{Concept Drift Adaptation by exploiting historical knowledge}{section.1.2}% 22
 \BOOKMARK [2][-]{subsection.1.2.8}{Handling concept drift via model reuse}{section.1.2}% 23
 \BOOKMARK [2][-]{subsection.1.2.9}{Reacting to Different Types of Concept Drift: The Accuracy Updated Ensemble Algorithm}{section.1.2}% 24
-\BOOKMARK [1][-]{section.1.3}{M\351thodes de d\351t\351ction non supervis\351es}{chapter.1}% 25
-\BOOKMARK [2][-]{subsection.1.3.1}{An adaptive algorithm for anomaly and novelty detection in evolving data streams}{section.1.3}% 26
-\BOOKMARK [1][-]{section.1.4}{M\351thodes annexes}{chapter.1}% 27
-\BOOKMARK [2][-]{subsection.1.4.1}{Efficient Data Stream Classification via Probabilistic Adaptive Windows}{section.1.4}% 28
+\BOOKMARK [2][-]{subsection.1.2.10}{Dynamic financial distress prediction using instance selection for the disposal of concept drift}{section.1.2}% 25
+\BOOKMARK [2][-]{subsection.1.2.11}{Learning under concept drift using a neuro-evolutionary ensemble}{section.1.2}% 26
+\BOOKMARK [1][-]{section.1.3}{M\351thodes de d\351t\351ction non supervis\351es}{chapter.1}% 27
+\BOOKMARK [2][-]{subsection.1.3.1}{An adaptive algorithm for anomaly and novelty detection in evolving data streams}{section.1.3}% 28
+\BOOKMARK [1][-]{section.1.4}{M\351thodes annexes}{chapter.1}% 29
+\BOOKMARK [2][-]{subsection.1.4.1}{Efficient Data Stream Classification via Probabilistic Adaptive Windows}{section.1.4}% 30

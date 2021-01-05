@@ -195,17 +195,33 @@
 \contentsline {paragraph}{Mots clefs :}{15}{section*.175}
 \contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{15}{section*.176}
 \contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{15}{section*.177}
-\contentsline {section}{\numberline {1.3}M\IeC {\'e}thodes de d\IeC {\'e}t\IeC {\'e}ction non supervis\IeC {\'e}es}{16}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}An adaptive algorithm for anomaly and novelty detection in evolving data streams}{16}{subsection.1.3.1}
-\contentsline {subsubsection}{Mohamed-Rafik Bouguelia, Slawomir Nowaczyk, Amir H. Payberah; 2018}{16}{section*.178}
-\contentsline {paragraph}{Mots clefs :}{16}{section*.179}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{16}{section*.180}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ? }{16}{section*.181}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ? }{16}{section*.182}
-\contentsline {section}{\numberline {1.4}M\IeC {\'e}thodes annexes}{17}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Efficient Data Stream Classification via Probabilistic Adaptive Windows}{17}{subsection.1.4.1}
-\contentsline {subsubsection}{Albert Bifet, Jesse Read, Bernhard Pfahringer, Geoff Holmes; 2013}{17}{section*.183}
-\contentsline {paragraph}{Mots clefs :}{17}{section*.184}
-\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{17}{section*.185}
-\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{17}{section*.186}
-\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{17}{section*.187}
+\contentsline {subsection}{\numberline {1.2.10}Dynamic financial distress prediction using instance selection for the disposal of concept drift}{15}{subsection.1.2.10}
+\contentsline {subsubsection}{Jie Sun, Hui Li, 2011}{15}{section*.178}
+\contentsline {subsubsection}{Cit\IeC {\'e} 65 fois, }{15}{section*.179}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{15}{section*.180}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{15}{section*.181}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{15}{section*.182}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{15}{section*.183}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{15}{section*.184}
+\contentsline {subsection}{\numberline {1.2.11}Learning under concept drift using a neuro-evolutionary ensemble}{16}{subsection.1.2.11}
+\contentsline {subsubsection}{Jie Sun, Hui Li, 2013}{16}{section*.185}
+\contentsline {subsubsection}{Cit\IeC {\'e} 4 fois, }{16}{section*.186}
+\contentsline {paragraph}{Type de D\IeC {\'e}rive :}{16}{section*.187}
+\contentsline {paragraph}{Quelles informations utilis\IeC {\'e}es dans la d\IeC {\'e}tection :}{16}{section*.188}
+\contentsline {paragraph}{Quel type de d\IeC {\'e}tection :}{16}{section*.189}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{16}{section*.190}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{16}{section*.191}
+\contentsline {section}{\numberline {1.3}M\IeC {\'e}thodes de d\IeC {\'e}t\IeC {\'e}ction non supervis\IeC {\'e}es}{17}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}An adaptive algorithm for anomaly and novelty detection in evolving data streams}{17}{subsection.1.3.1}
+\contentsline {subsubsection}{Mohamed-Rafik Bouguelia, Slawomir Nowaczyk, Amir H. Payberah; 2018}{17}{section*.192}
+\contentsline {paragraph}{Mots clefs :}{17}{section*.193}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{17}{section*.194}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ? }{17}{section*.195}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ? }{17}{section*.196}
+\contentsline {section}{\numberline {1.4}M\IeC {\'e}thodes annexes}{18}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Efficient Data Stream Classification via Probabilistic Adaptive Windows}{18}{subsection.1.4.1}
+\contentsline {subsubsection}{Albert Bifet, Jesse Read, Bernhard Pfahringer, Geoff Holmes; 2013}{18}{section*.197}
+\contentsline {paragraph}{Mots clefs :}{18}{section*.198}
+\contentsline {paragraph}{R\IeC {\'e}sum\IeC {\'e} :}{18}{section*.199}
+\contentsline {paragraph}{\IeC {\`A} quelle(s) probl\IeC {\'e}matique(s) l'article r\IeC {\'e}pond ?}{18}{section*.200}
+\contentsline {paragraph}{Quelles sont les pistes \IeC {\`a} explorer et ont-elles \IeC {\'e}t\IeC {\'e} explor\IeC {\'e}es par d'autres articles ?}{18}{section*.201}
