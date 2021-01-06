@@ -737,6 +737,29 @@ Les données qui arrivent au fil de l'eau peuvent être incorporé aux modèles 
 
 
 
+\subsection{Self-Adaptive Windowing Approach for Handling Complex Concept Drift}
+\subsubsection{Imen Khamassi, Moamar Sayed-Mouchaweh,  2015}
+
+\subsubsection{Cité 25 fois, }
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$ 
+\paragraph{Quelles informations utilisées dans la détection :} Données labélisées.
+\paragraph{Quel type de détection :} Rapide
+
+\paragraph{Résumé :} L'article détaille la détection de la dérive. Celle-ci ce fait en regardant le taux d'erreur d'un modèle sur deux fenêtres. Une première fenêtre englobe toute les observations depuis le dernier drift, une autre fenêtre n'englobe que les observations récentes. On suppose les erreurs normalement distribuées ce qui nous permets de faire un test statistique. Si un niveau d'alerte est soulevé alors, on arrête d'agrandir la "grande fenêtre". Et on commence à stocker les données pour un nouvel entraînement.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
