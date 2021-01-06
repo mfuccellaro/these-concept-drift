@@ -657,7 +657,7 @@ Les anciens modèles sont actualisés en prenant en compte le nouveau batch. Si 
 
 
 \subsection{Learning under concept drift using a neuro-evolutionary ensemble}
-\subsubsection{Jie Sun, Hui Li, 2013}
+\subsubsection{Tatiana Escovedo, 2015}
 
 \subsubsection{Cité 4 fois, }
 
@@ -668,6 +668,71 @@ Les anciens modèles sont actualisés en prenant en compte le nouveau batch. Si 
 \paragraph{Résumé :} Les auteurs utilisent un schéma classique de gestion de la dérive. C'est à dire qu'ils procèdent à un réapprentissage systématique. L'aspect nouveaux vient de la manière dont les modèles sont séléctionnés. On utilise un ensemble de réseaux de neuronnes. Les poids de chaque réseaux est pondéré par un sa performance prédictive. Avec l'arrivé d'un nouveau batch de donnée un nouveau modèle est instancié. Mais les poids et biais de ce réseaux sont choisi par un algorithme génétique.
 
 \paragraph{À quelle(s) problématique(s) l'article répond ?} L'article ce focalise sur la qualité des prédictions. L'architecture des modèles pourrait également être séléctionné par un algorithme génétique.
+
+
+
+
+
+
+
+\subsection{Ensemble of subset online sequential extreme learning machine for class imbalance and concept drift}
+\subsubsection{Bilal Mirza a,n, Zhiping Lin  2013}
+
+\subsubsection{Cité 120 fois, }
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$ 
+\paragraph{Quelles informations utilisées dans la détection :} Données labélisées.
+\paragraph{Quel type de détection :} Problème contrebalancé, Concept récurrent.
+
+\paragraph{Résumé :} Deux méthodes sont apportés pour lutter contre la dérive et les classes contrebalancés. Les auteurs utlisent autant de modèles que le ratio de classe. Si on a 10\% de classe positive, alors on aura 10 modèles. Chaque modèle sera entraîné sur toute les classes positives, mais seulement sur 10\% des classes négatives. 
+Les données qui arrivent au fil de l'eau peuvent être incorporé aux modèles (Extreme Learning Machines). Quand on observe une baisse de performance (selon la métrique Gmean; $\text { Gmean }=\sqrt{T P R \times T N R}$ ou $TPR$ et $TNR$ étant les taux de vrais positifs et négatifs.) Alors un nouveaux modèle est incorporé au pool entraîné sur les dernières données.
+
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Problème contrebalancé.
+
+
+
+
+
+
+
+
+\subsection{Fast Adapting Ensemble: A New Algorithm for Mining Data Streams with Concept Drift}
+\subsubsection{Agustín Ortíz Díaz,1 José del Campo-Ávila,  2014}
+
+\subsubsection{Cité 15 fois, }
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$ 
+\paragraph{Quelles informations utilisées dans la détection :} Données labélisées.
+\paragraph{Quel type de détection :} Concept récurrent.
+
+\paragraph{Résumé :} La méthode fait appel à un ensemble de modèle. Les modèles peuvent être actif où passif. Leurs status dépends de leurs performances obtenues sur les dernières données labélisées. Quand il y a détection d'un dérive qui est faite avec DDM où EDDM alors un nouveau modèle est ajouté. DDM utilise le fait qu'une dérive apparait lors de la déterioration des résultats. En toute logique, si un concept est récurrents, les classifieurs vont être réactivés et donc aucun nouveau modèle ne sera rajouté. Si un modèle doit être rajouté, et que le nombre de modèle du pool maximum est atteint alors, on supprime un modèle en ce basant sur l'age et les performances.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} 
+
+
+
+
+
+
+
+\subsection{Adaptive Learning with Covariate Shift- Detection for Non-Stationary Environments}
+\subsubsection{Haider Raza, Girijesh Prasad,  2014}
+
+\subsubsection{Cité 10 fois, }
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(y \mid X)$ 
+\paragraph{Quelles informations utilisées dans la détection :} Données labélisées.
+\paragraph{Quel type de détection :} Rapide
+
+\paragraph{Résumé :} Ici on a un seul modèle. On utilise un détecteur de dérive à deux étapes. Quand une dérive est supectée alors on enclenche le deuxième test. Si la dérive est confirmée, alors on stocke les données relatives au nouveau concept et on attend les labels avant de procéder au réentraînement.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} 
+
+
+
+
+
 
 
 
