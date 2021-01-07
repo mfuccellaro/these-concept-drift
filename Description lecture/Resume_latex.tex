@@ -356,16 +356,41 @@ Un première méthode utilise la moyenne comme critère de détéction, la deuxi
 
 
 
-\subsection{Handling adversarial concept drift in streaming data}
-\subsubsection{Tegjyot Singh Sethi , Mehmed Kantardzic, 2017}
+\subsection{On the reliable detection of concept drift from streaming unlabeled data}
+\subsubsection{Tegjyot Singh Sethi, Mehmed Kantardzic; 2017}
+\subsubsection{Cité 78 fois, Elsevier}
 
-\paragraph{Mots clefs}  adversarial concept drift 
 
-\paragraph{Résumé :} A lire.
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(X)$
+\paragraph{Quelles informations utilisées dans la détection :} vecteur X, modèle.
+\paragraph{Quel type de détection :} Dérive de façon non-supervisé avec informations du modèle.
 
-\paragraph{À quelle(s) problématique(s) l'article répond ?}
+\paragraph{Mots clefs :} Non supervisé
+
+\paragraph{Résumé :} Les approches supervisés font l'hypothèse que l'on dispose des données labélisé. Les approches de détections non supervisés souffrent souvent d'un haut taux de faux positifs. Afin de palier à ce problème les auteurs proposent un algorithme Margin Density Drift Detection (DM3). Cet algorithme, va observer le nombre d'observation qui tombent dans le domaine d'incertitude du modèle. Si ce taux augmente, alors, on commence un stockage des données et on demande un labélisation par un oracle. Si on constate une baisse de performance alors on réentraîne le modèle. Dans le cas des modèles n'ayant pas par construction une marge d'incertitude, on va comptabiliser les observartion qui tombe dans un domaine ou la classification est ambigue.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Taux de faux positifs contrôlés.
 
 \paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
+
+
+
+
+
+
+
+
+
+%\subsection{Handling adversarial concept drift in streaming data}
+%\subsubsection{Tegjyot Singh Sethi , Mehmed Kantardzic, 2017}
+
+%\paragraph{Mots clefs}  adversarial concept drift 
+
+%\paragraph{Résumé :} A lire.
+
+%\paragraph{À quelle(s) problématique(s) l'article répond ?}
+
+%\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?} 
 
 
 
@@ -734,9 +759,6 @@ Les données qui arrivent au fil de l'eau peuvent être incorporé aux modèles 
 
 
 
-
-
-
 \subsection{Self-Adaptive Windowing Approach for Handling Complex Concept Drift}
 \subsubsection{Imen Khamassi, Moamar Sayed-Mouchaweh,  2015}
 
@@ -749,6 +771,29 @@ Les données qui arrivent au fil de l'eau peuvent être incorporé aux modèles 
 \paragraph{Résumé :} L'article détaille la détection de la dérive. Celle-ci ce fait en regardant le taux d'erreur d'un modèle sur deux fenêtres. Une première fenêtre englobe toute les observations depuis le dernier drift, une autre fenêtre n'englobe que les observations récentes. On suppose les erreurs normalement distribuées ce qui nous permets de faire un test statistique. Si un niveau d'alerte est soulevé alors, on arrête d'agrandir la "grande fenêtre". Et on commence à stocker les données pour un nouvel entraînement.
 
 \paragraph{À quelle(s) problématique(s) l'article répond ?} 
+
+
+
+
+
+\subsection{Scalable real-time classification of data streams with concept drift}
+\subsubsection{Mark Tennant, Frederic Stahl; 2017}
+\subsubsection{Cité 53 fois, Elsevier}
+
+
+\paragraph{Type de Dérive :} $P(X\mid y)$ et $P(X)$
+\paragraph{Quelles informations utilisées dans la détection :} vecteur X, labels.
+\paragraph{Quel type de détection :} Algorithme d'apprentissage continu fait pour le drift
+
+\paragraph{Mots clefs :} Plus plroche voisin, parallèlisable.
+
+\paragraph{Résumé :} Ici un modèle à base de clusters faisant un apprenstissage en ligne est présenté. Avec chaque cluster on traque sont taux d'erreur de prédictions. Avec chaque nouvelle observations labélisées, on fait la prédiction en lui attribuant la valuer du cluster le plus proche puis on l'ajoute au cluster ayant le même label le plus proche. Ce sera le cluster qui a fait la prédiction si celle-ci est juste. Si le taux d'erreurs devient trop grand alors on sépare le cluster en deux.
+
+\paragraph{À quelle(s) problématique(s) l'article répond ?} Méthode en ligne.
+
+\paragraph{Quelles sont les pistes à explorer et ont-elles  été explorées par d'autres articles ?}
+
+
 
 
 
